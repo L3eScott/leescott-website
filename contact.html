@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Lee Scott</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <h1>Lee Scott</h1>
+        <span>Data-Driven Business Automation</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h2>Let's Talk About Your Business</h2>
+      <p>Tell us where you are and where you want to go. We'll identify the systems that will move the needle most.</p>
+    </section>
+
+    <!-- Contact Grid -->
+    <div class="section-wrap">
+      <div class="section">
+        <div class="contact-grid">
+
+          <!-- Left: Info & Trust -->
+          <div class="contact-info">
+            <h3>What to Expect</h3>
+            <p>Fill out the form and we'll be in touch within one business day to schedule your free strategy call. No commitment, no pressure — just a direct conversation about your business.</p>
+            <ul class="trust-items">
+              <li>
+                <span class="ti-icon">&#128222;</span>
+                <div>
+                  <strong>Free 30-Minute Strategy Call</strong>
+                  <p>We start every engagement with a conversation. You'll leave with clarity on what your business needs — whether or not you work with us.</p>
+                </div>
+              </li>
+              <li>
+                <span class="ti-icon">&#127919;</span>
+                <div>
+                  <strong>Direct, Honest Assessment</strong>
+                  <p>We'll tell you exactly what we see and what we'd recommend. No filler, no overselling — just a straight read on your situation.</p>
+                </div>
+              </li>
+              <li>
+                <span class="ti-icon">&#127963;&#65039;</span>
+                <div>
+                  <strong>Serving Houston, Austin, San Antonio &amp; DFW</strong>
+                  <p>We work with Texas businesses in-person and remotely, and with clients nationwide via video.</p>
+                </div>
+              </li>
+              <li>
+                <span class="ti-icon">&#9201;&#65039;</span>
+                <div>
+                  <strong>Response Within 24 Hours</strong>
+                  <p>Every inquiry is reviewed and responded to within one business day. Usually faster.</p>
+                </div>
+              </li>
+              <li>
+                <span class="ti-icon">&#128200;</span>
+                <div>
+                  <strong>10+ Years of Business Intelligence Experience</strong>
+                  <p>You're talking to someone who has built real systems for real businesses — not a junior consultant reading from a template.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact-form-box">
+            <h3>Start the Conversation</h3>
+            <p class="form-sub">All fields marked * are required. We keep your information private and never share it.</p>
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="full-name">Full Name *</label>
+                  <input type="text" id="full-name" name="full-name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="business-name">Business Name *</label>
+                  <input type="text" id="business-name" name="business-name" placeholder="Your business" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="business-type">Business Type *</label>
+                  <select id="business-type" name="business-type" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option>Service Business</option>
+                    <option>Retail</option>
+                    <option>Professional Services</option>
+                    <option>Real Estate</option>
+                    <option>Healthcare</option>
+                    <option>Technology</option>
+                    <option>Construction / Trades</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="goal">Primary Goal *</label>
+                  <select id="goal" name="goal" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option>New Website</option>
+                    <option>AI / Lead Automation</option>
+                    <option>Power BI / Reporting</option>
+                    <option>Full Business System</option>
+                    <option>Not Sure Yet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell us about your business and your goals *</label>
+                <textarea id="message" name="message" placeholder="What's your biggest operational challenge right now? What would success look like for you in the next 12 months?" required></textarea>
+              </div>
+              <button type="submit" class="btn" style="width: 100%; font-size: 1rem;">Send Message</button>
+              <p class="form-note">By submitting this form, you agree to be contacted about our services. We respect your privacy and will never share your information.</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Region callout -->
+    <div class="section-wrap alt">
+      <div class="section text-center">
+        <span class="section-label">Where We Work</span>
+        <h2 class="section-title">Serving Texas &amp; Beyond</h2>
+        <p style="max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-light);">We have active clients across all four major Texas markets and work with businesses nationwide via video. Distance has never been a barrier to building the right systems.</p>
+        <div class="region-grid">
+          <div class="region-card">
+            <span class="region-icon">&#127961;&#65039;</span>
+            <strong>Houston</strong>
+            <span>In-person available</span>
+          </div>
+          <div class="region-card">
+            <span class="region-icon">&#127961;&#65039;</span>
+            <strong>Austin</strong>
+            <span>In-person available</span>
+          </div>
+          <div class="region-card">
+            <span class="region-icon">&#127961;&#65039;</span>
+            <strong>San Antonio</strong>
+            <span>In-person available</span>
+          </div>
+          <div class="region-card">
+            <span class="region-icon">&#127961;&#65039;</span>
+            <strong>Dallas-Fort Worth</strong>
+            <span>In-person available</span>
+          </div>
+          <div class="region-card">
+            <span class="region-icon">&#127760;</span>
+            <strong>Nationwide</strong>
+            <span>Remote via video</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+      <h2>Ready to Start the Conversation?</h2>
+      <p>Fill out the form above — we'll review it and follow up within one business day to schedule your free strategy call.</p>
+      <a href="#contact-form" class="btn" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'}); return false;">Send Us a Message</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Lee Scott</h3>
+        <span class="tagline">Data-Driven Business Automation Architect</span>
+        <p>We build smart websites with AI workers built in — so your business captures leads, follows up automatically, and never misses an opportunity.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="contact.html">Houston, TX</a></li>
+          <li><a href="contact.html">Austin, TX</a></li>
+          <li><a href="contact.html">San Antonio, TX</a></li>
+          <li><a href="contact.html">Dallas-Fort Worth, TX</a></li>
+          <li><a href="contact.html">Remote Nationwide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&#169; 2026 Lee Scott. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
