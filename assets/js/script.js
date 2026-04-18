@@ -46,3 +46,13 @@ if (form) {
     }, 4000);
   });
 }
+document.querySelectorAll('.btn').forEach(button => {
+  button.addEventListener('click', function() {
+    if (typeof gtag === 'function') {
+      gtag('event', 'button_click', {
+        event_category: 'engagement',
+        event_label: this.innerText
+      });
+    }
+  });
+});
