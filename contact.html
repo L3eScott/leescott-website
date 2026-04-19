@@ -1,28 +1,258 @@
-<form action="https://formspree.io/f/YOUR-ID" method="POST" id="lead-form">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LY2DK30PC2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <label>Full Name</label>
-  <input type="text" name="name" required>
+  gtag('config', 'G-LY2DK30PC2');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Lee Scott</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
 
-  <label>Email</label>
-  <input type="email" name="email" required>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <h1>Lee Scott</h1>
+        <span>Data-Driven Business Automation</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <label>Phone</label>
-  <input type="text" name="phone">
+  <main>
 
-  <label>Business Name</label>
-  <input type="text" name="business">
+    <section class="page-hero">
+      <h2>Let's Talk About Your Business</h2>
+      <p>Tell us where you are and where you want to go. We'll identify the systems that will move the needle most.</p>
+    </section>
 
-  <label>What do you need help with?</label>
-  <textarea name="message" required></textarea>
+    <!-- Contact Grid -->
+    <div class="section-wrap">
+      <div class="section">
+        <div class="contact-grid">
 
-  <label>Budget Range</label>
-  <select name="budget">
-    <option>Under $500</option>
-    <option>$500 - $1,500</option>
-    <option>$1,500 - $5,000</option>
-    <option>$5,000+</option>
-  </select>
+          <!-- Left: Info & Trust -->
+          <div class="contact-info">
+            <h3>What to Expect</h3>
+            <p>Fill out the form and we'll be in touch within one business day to schedule your free strategy call. No commitment, no pressure — just a direct conversation about your business.</p>
+            <div class="contact-details">
+              <a href="mailto:contact@digitalopsystems.com" class="contact-detail-link">
+                <span class="cd-icon">&#9993;&#65039;</span> contact@digitalopsystems.com
+              </a>
+              <a href="tel:2254957086" class="contact-detail-link">
+                <span class="cd-icon">&#128222;</span> 225-495-7086
+              </a>
+              <a href="https://www.linkedin.com/in/leeoscott/" target="_blank" rel="noopener noreferrer" class="contact-detail-link">
+                <span class="cd-icon">&#128101;</span> LinkedIn
+              </a>
+              <a href="https://www.youtube.com/@leescotte37" target="_blank" rel="noopener noreferrer" class="contact-detail-link">
+                <span class="cd-icon">&#127909;</span> YouTube
+              </a>
+              <a href="https://www.tiktok.com/@e37l3e" target="_blank" rel="noopener noreferrer" class="contact-detail-link">
+                <span class="cd-icon">&#127926;</span> TikTok
+              </a>
+              <a href="https://x.com/Otis_S_Park" target="_blank" rel="noopener noreferrer" class="contact-detail-link">
+                <span class="cd-icon">&#120143;</span> X
+              </a>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-light); margin-bottom: 2rem;">Typically respond within 24 hours.</p>
+            <ul class="trust-items">
+              <li>
+                <span class="ti-icon">&#128222;</span>
+                <div>
+                  <strong>Free 30-Minute Strategy Call</strong>
+                  <p>We start every engagement with a conversation. You'll leave with clarity on what your business needs — whether or not you work with us.</p>
+                </div>
+              </li>
+              <li>
+                <span class="ti-icon">&#127919;</span>
+                <div>
+                  <strong>Direct, Honest Assessment</strong>
+                  <p>We'll tell you exactly what we see and what we'd recommend. No filler, no overselling — just a straight read on your situation.</p>
+                </div>
+              </li>
+              <li>
+                <span class="ti-icon">&#127963;&#65039;</span>
+                <div>
+                  <strong>Serving Houston, Austin, San Antonio &amp; DFW</strong>
+                  <p>We work with Texas businesses in-person and remotely, and with clients nationwide via video.</p>
+                </div>
+              </li>
+              <li>
+                <span class="ti-icon">&#9201;&#65039;</span>
+                <div>
+                  <strong>Response Within 24 Hours</strong>
+                  <p>Every inquiry is reviewed and responded to within one business day. Usually faster.</p>
+                </div>
+              </li>
+              <li>
+                <span class="ti-icon">&#128200;</span>
+                <div>
+                  <strong>10+ Years of Business Intelligence Experience</strong>
+                  <p>You're talking to someone who has built real systems for real businesses — not a junior consultant reading from a template.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-  <button type="submit" class="btn">Start My System</button>
+          <!-- Right: Form -->
+          <div class="contact-form-box">
+            <h3>Start the Conversation</h3>
+            <p class="form-sub">All fields marked * are required. We keep your information private and never share it.</p>
+            <form id="lead-form" action="https://formspree.io/f/YOUR-ID" method="POST" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="business">Business Name</label>
+                  <input type="text" id="business" name="business" placeholder="Your business" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">What do you need help with? *</label>
+                <textarea id="message" name="message" placeholder="What's your biggest operational challenge right now? What would success look like for you in the next 12 months?" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget">
+                  <option value="" disabled selected>Select one</option>
+                  <option>Under $500</option>
+                  <option>$500 - $1,500</option>
+                  <option>$1,500 - $5,000</option>
+                  <option>$5,000+</option>
+                </select>
+              </div>
+              <button type="submit" class="btn" style="width: 100%; font-size: 1rem;">Start My System</button>
+              <p class="form-note">By submitting this form, you agree to be contacted about our services. We respect your privacy and will never share your information.</p>
+            </form>
+          </div>
 
-</form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Region callout -->
+    <div class="section-wrap alt">
+      <div class="section text-center">
+        <span class="section-label">Where We Work</span>
+        <h2 class="section-title">Serving Texas &amp; Beyond</h2>
+        <p style="max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-light);">We have active clients across all four major Texas markets and work with businesses nationwide via video. Distance has never been a barrier to building the right systems.</p>
+        <div class="region-grid">
+          <div class="region-card">
+            <span class="region-icon">&#127961;&#65039;</span>
+            <strong>Houston</strong>
+            <span>In-person available</span>
+          </div>
+          <div class="region-card">
+            <span class="region-icon">&#127961;&#65039;</span>
+            <strong>Austin</strong>
+            <span>In-person available</span>
+          </div>
+          <div class="region-card">
+            <span class="region-icon">&#127961;&#65039;</span>
+            <strong>San Antonio</strong>
+            <span>In-person available</span>
+          </div>
+          <div class="region-card">
+            <span class="region-icon">&#127961;&#65039;</span>
+            <strong>Dallas-Fort Worth</strong>
+            <span>In-person available</span>
+          </div>
+          <div class="region-card">
+            <span class="region-icon">&#127760;</span>
+            <strong>Nationwide</strong>
+            <span>Remote via video</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+      <h2>Ready to Start the Conversation?</h2>
+      <p>Fill out the form above — we'll review it and follow up within one business day to schedule your free strategy call.</p>
+      <a href="#lead-form" class="btn" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'}); return false;">Send Us a Message</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Lee Scott</h3>
+        <span class="tagline">Data-Driven Business Automation Architect</span>
+        <p>We build smart websites with AI workers built in — so your business captures leads, follows up automatically, and never misses an opportunity.</p>
+        <div class="footer-contact">
+          <a href="mailto:contact@digitalopsystems.com">contact@digitalopsystems.com</a>
+          <a href="tel:2254957086">225-495-7086</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/leeoscott/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.youtube.com/@leescotte37" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://x.com/Otis_S_Park" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="contact.html">Houston, TX</a></li>
+          <li><a href="contact.html">Austin, TX</a></li>
+          <li><a href="contact.html">San Antonio, TX</a></li>
+          <li><a href="contact.html">Dallas-Fort Worth, TX</a></li>
+          <li><a href="contact.html">Remote Nationwide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&#169; 2026 Lee Scott. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -26,28 +26,9 @@ if (navToggle && navMenu) {
   });
 })();
 
-// Contact form handler
-var form = document.getElementById('contact-form');
-if (form) {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = form.querySelector('button[type="submit"]');
-    var original = btn.textContent;
-    btn.textContent = 'Message Sent!';
-    btn.style.background = '#27ae60';
-    btn.style.borderColor = '#27ae60';
-    btn.disabled = true;
-    setTimeout(function () {
-      btn.textContent = original;
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      btn.disabled = false;
-      form.reset();
-    }, 4000);
-  });
-}
-document.querySelectorAll('.btn').forEach(button => {
-  button.addEventListener('click', function() {
+// Button click tracking (GA4)
+document.querySelectorAll('.btn').forEach(function (button) {
+  button.addEventListener('click', function () {
     if (typeof gtag === 'function') {
       gtag('event', 'button_click', {
         event_category: 'engagement',
@@ -56,10 +37,11 @@ document.querySelectorAll('.btn').forEach(button => {
     }
   });
 });
-const form = document.getElementById('lead-form');
 
-if (form) {
-  form.addEventListener('submit', function () {
+// Lead form submission tracking (GA4)
+var leadForm = document.getElementById('lead-form');
+if (leadForm) {
+  leadForm.addEventListener('submit', function () {
     if (typeof gtag === 'function') {
       gtag('event', 'form_submit', {
         event_category: 'lead',
