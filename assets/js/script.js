@@ -56,3 +56,15 @@ document.querySelectorAll('.btn').forEach(button => {
     }
   });
 });
+const form = document.getElementById('lead-form');
+
+if (form) {
+  form.addEventListener('submit', function () {
+    if (typeof gtag === 'function') {
+      gtag('event', 'form_submit', {
+        event_category: 'lead',
+        event_label: 'Contact Form'
+      });
+    }
+  });
+}
