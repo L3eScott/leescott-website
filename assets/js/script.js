@@ -55,6 +55,8 @@ if (leadForm) {
 (function () {
   var STORAGE_KEY = 'founding_banner_closed';
   var RESHOW_MS = 5 * 60 * 1000; // 5 minutes
+  var banner = null;
+  var shown = false;
 
   function shouldShow() {
     var closed = localStorage.getItem(STORAGE_KEY);
@@ -62,8 +64,20 @@ if (leadForm) {
     return (Date.now() - parseInt(closed, 10)) >= RESHOW_MS;
   }
 
+  function showBanner() {
+    if (shown || !banner) return;
+    shown = true;
+    banner.classList.add('visible');
+  }
+
+  function hideBanner(save) {
+    if (!banner) return;
+    banner.classList.remove('visible');
+    if (save) localStorage.setItem(STORAGE_KEY, Date.now().toString());
+  }
+
   function buildBanner() {
-    var banner = document.createElement('div');
+    banner = document.createElement('div');
     banner.id = 'founding-banner';
     banner.setAttribute('role', 'complementary');
     banner.setAttribute('aria-label', 'Founding Client Offer');
@@ -83,10 +97,21 @@ if (leadForm) {
 
     document.body.appendChild(banner);
 
-    // Slide in after 3 seconds
-    setTimeout(function () {
-      banner.classList.add('visible');
-    }, 3000);
+    // Slide in after 10 seconds
+    setTimeout(showBanner, 10000);
+
+    // Exit intent: mouse leaves viewport toward browser chrome (back/close buttons)
+    document.addEventListener('mouseleave', function (e) {
+      if (e.clientY <= 0 && shouldShow()) {
+        shown = false; // allow re-trigger if dismissed and cooldown expired
+        showBanner();
+      }
+    });
+
+    // Tab close / page hide attempt
+    window.addEventListener('pagehide', function () {
+      if (shouldShow()) showBanner();
+    });
 
     // Smooth scroll on contact page
     if (isContactPage) {
@@ -96,15 +121,13 @@ if (leadForm) {
           e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth' });
         }
-        banner.classList.remove('visible');
-        localStorage.setItem(STORAGE_KEY, Date.now().toString());
+        hideBanner(true);
       });
     }
 
     // Close button
     document.getElementById('banner-close').addEventListener('click', function () {
-      banner.classList.remove('visible');
-      localStorage.setItem(STORAGE_KEY, Date.now().toString());
+      hideBanner(true);
     });
   }
 
