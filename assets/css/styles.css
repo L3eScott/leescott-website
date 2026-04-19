@@ -1574,3 +1574,104 @@ footer {
   .workers-grid { grid-template-columns: 1fr; }
   .problem-grid { grid-template-columns: 1fr; }
 }
+
+/* =====================
+   Floating Banner
+   ===================== */
+#founding-banner {
+  position: fixed;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  max-width: 680px;
+  background: #fffbf0;
+  border: 1px solid #e8d5a0;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -4px 24px rgba(13,27,42,0.12);
+  padding: 1.25rem 1.5rem 1rem;
+  z-index: 9999;
+  transition: bottom 0.4s ease;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+#founding-banner.visible {
+  bottom: 0;
+}
+
+#founding-banner .banner-text {
+  flex: 1;
+}
+
+#founding-banner .banner-text strong {
+  display: block;
+  color: var(--navy);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+#founding-banner .banner-text p {
+  color: var(--text-light);
+  font-size: 0.83rem;
+  margin: 0;
+  line-height: 1.45;
+}
+
+#founding-banner .banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+#founding-banner .btn-banner {
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#founding-banner .btn-banner:hover {
+  background: var(--gold-dark);
+}
+
+#founding-banner .btn-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.25rem;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+#founding-banner .btn-close:hover {
+  color: var(--navy);
+}
+
+@media (max-width: 540px) {
+  #founding-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1rem 0.75rem;
+  }
+
+  #founding-banner .banner-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
