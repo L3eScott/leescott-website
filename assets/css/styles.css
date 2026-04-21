@@ -1491,6 +1491,92 @@ footer {
 }
 
 /* =====================
+   Demo Cards (Our Work)
+   ===================== */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.demo-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 1.75rem;
+  position: relative;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 4px solid var(--gold);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.demo-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+  transform: translateY(-2px);
+}
+
+.demo-card--soon {
+  border-top-color: var(--border);
+  opacity: 0.75;
+}
+
+.demo-card--soon:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.demo-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.75rem;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.demo-badge--soon {
+  background: var(--border);
+  color: var(--text-light);
+}
+
+.demo-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.demo-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+  color: var(--navy);
+}
+
+.demo-card p {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.demo-card .btn,
+.demo-card .btn-navy {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.demo-btn-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* =====================
    Responsive
    ===================== */
 @media (max-width: 1094px) and (min-width: 769px) {

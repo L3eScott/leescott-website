@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sloane Avery — Lifestyle Creator & Brand Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & ROOT ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #FAF7F2;
+      --off-white:  #F2EDE5;
+      --black:      #0C0C0C;
+      --charcoal:   #252525;
+      --mid:        #6A6560;
+      --border:     #DDD8D0;
+      --gold:       #C49A38;
+      --gold-light: #E8C97A;
+      --blush:      #EDCECB;
+      --rose:       #C78A8A;
+      --white:      #FFFFFF;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+      --nav-h: 72px;
+      --max-w: 1240px;
+      --pad:   clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--black);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    img { display: block; max-width: 100%; }
+    a   { color: inherit; text-decoration: none; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.875rem 2rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: none;
+    }
+    .btn-dark    { background: var(--black); color: var(--white); }
+    .btn-dark:hover  { background: var(--charcoal); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+    .btn-outline:hover { background: var(--black); color: var(--white); transform: translateY(-2px); }
+    .btn-gold    { background: var(--gold); color: var(--white); }
+    .btn-gold:hover  { background: #b08830; transform: translateY(-2px); }
+    .btn-white   { background: var(--white); color: var(--black); }
+    .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
+
+    /* ─── ANIMATIONS ──────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h); z-index: 100;
+      display: flex; align-items: center;
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+    }
+    nav.scrolled {
+      background: rgba(250,247,242,0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 var(--border);
+    }
+
+    .nav-inner {
+      width: 100%; max-width: var(--max-w); margin: 0 auto;
+      padding: 0 var(--pad);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--serif); font-size: 1.375rem; font-weight: 700;
+      color: var(--white); transition: color 0.35s ease;
+    }
+    nav.scrolled .nav-logo { color: var(--black); }
+
+    .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: rgba(255,255,255,0.85); transition: color 0.25s ease;
+    }
+    .nav-links a:hover { color: var(--white); }
+    nav.scrolled .nav-links a { color: var(--mid); }
+    nav.scrolled .nav-links a:hover { color: var(--black); }
+
+    .nav-cta {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.625rem 1.5rem;
+      border: 1.5px solid rgba(255,255,255,0.6); border-radius: 2px;
+      color: var(--white); transition: all 0.25s ease;
+    }
+    .nav-cta:hover { background: var(--white); color: var(--black); }
+    nav.scrolled .nav-cta { border-color: var(--black); color: var(--black); }
+    nav.scrolled .nav-cta:hover { background: var(--black); color: var(--white); }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--white); border-radius: 2px; transition: background 0.35s ease;
+    }
+    nav.scrolled .hamburger span { background: var(--black); }
+
+    /* ─── HERO ────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh; position: relative;
+      display: flex; align-items: flex-end; overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, #1A0E08 0%, #2D1A12 35%, #3D2518 60%, #1A0E08 100%);
+    }
+    .hero-bg::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(125deg, transparent 45%, rgba(196,154,56,0.08) 45%, rgba(196,154,56,0.08) 55%, transparent 55%);
+    }
+
+    .hero-initial {
+      position: absolute; top: -0.1em; right: -0.05em;
+      font-family: var(--serif); font-size: clamp(20rem,40vw,52rem);
+      font-weight: 900; color: rgba(196,154,56,0.055); line-height: 1;
+      pointer-events: none; user-select: none;
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      padding: 0 var(--pad); padding-bottom: clamp(4rem,8vh,6rem);
+      width: 100%; max-width: var(--max-w); margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--gold-light);
+      margin-bottom: 1.75rem; animation: fadeIn 1.2s ease 0.3s both;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 32px; height: 1px; background: var(--gold-light);
+    }
+
+    .hero-name {
+      font-family: var(--serif); font-size: clamp(4rem,12vw,9.5rem);
+      font-weight: 900; line-height: 0.92; color: var(--white);
+      margin-bottom: 0.4em; animation: fadeUp 1s ease 0.5s both;
+    }
+    .hero-name em { font-style: italic; color: var(--gold-light); }
+
+    .hero-tagline {
+      font-size: clamp(1rem,2.2vw,1.25rem); font-weight: 300;
+      color: rgba(255,255,255,0.65); max-width: 480px;
+      margin-bottom: 2.5rem; animation: fadeUp 1s ease 0.7s both;
+    }
+
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      animation: fadeUp 1s ease 0.9s both;
+    }
+
+    .hero-scroll {
+      position: absolute; bottom: 2.5rem; right: var(--pad);
+      writing-mode: vertical-rl; font-size: 0.625rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+      display: flex; align-items: center; gap: 0.75rem;
+      animation: fadeIn 1.5s ease 1.2s both;
+    }
+    .hero-scroll::after {
+      content: ''; display: block; width: 1px; height: 48px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    }
+
+    /* ─── STATS ───────────────────────────────────────────── */
+    .stats-bar { background: var(--black); overflow: hidden; }
+    .stats-inner {
+      display: flex; align-items: stretch;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-item {
+      flex: 1; padding: 2rem 1.5rem; text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-num {
+      font-family: var(--serif); font-size: clamp(2rem,4vw,2.75rem);
+      font-weight: 700; color: var(--gold-light); line-height: 1; margin-bottom: 0.35rem;
+    }
+    .stat-label {
+      font-size: 0.6875rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45);
+    }
+
+    /* ─── ABOUT ───────────────────────────────────────────── */
+    #about { padding: clamp(5rem,10vh,8rem) 0; }
+
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem,6vw,6rem); align-items: center;
+    }
+
+    .about-image-wrap { position: relative; }
+
+    .about-photo {
+      width: 100%; aspect-ratio: 3/4;
+      background: linear-gradient(145deg, #C49A38 0%, #8B5E2A 40%, #2D1A12 100%);
+      border-radius: 2px; position: relative; overflow: hidden;
+    }
+    .about-photo::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .about-photo-quote {
+      position: absolute; bottom: 1.75rem; left: 1.75rem; right: 1.75rem;
+      font-family: var(--serif); font-size: 1.5rem; font-weight: 700;
+      color: var(--white); line-height: 1.3; z-index: 2;
+    }
+    .about-photo::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 65%;
+      background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+    }
+
+    .about-accent {
+      position: absolute; top: -1.5rem; right: -1.5rem;
+      width: 120px; height: 120px; border: 2px solid var(--gold);
+      border-radius: 2px; z-index: -1;
+    }
+
+    .about-badge {
+      position: absolute; bottom: -1.5rem; right: -1.5rem;
+      width: 7rem; height: 7rem; border-radius: 50%;
+      background: var(--gold); display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center; z-index: 2;
+    }
+    .about-badge strong { font-family: var(--serif); font-size: 1.25rem; font-weight: 900; color: var(--white); line-height: 1; }
+    .about-badge span { font-size: 0.5625rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); }
+
+    .about-text h2 {
+      font-family: var(--serif); font-size: clamp(2.25rem,4vw,3.5rem);
+      font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;
+    }
+    .about-text h2 em { font-style: italic; color: var(--gold); }
+    .about-text p { font-size: 1rem; color: var(--mid); line-height: 1.8; margin-bottom: 1.25rem; }
+
+    .about-platforms { display: flex; gap: 1.25rem; margin-top: 2rem; flex-wrap: wrap; }
+    .platform-chip {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.5rem 1rem; background: var(--off-white);
+      border: 1px solid var(--border); border-radius: 999px;
+      font-size: 0.75rem; font-weight: 600; color: var(--charcoal);
+    }
+    .platform-chip svg { width: 14px; height: 14px; fill: var(--gold); }
+
+    /* ─── MARQUEE ─────────────────────────────────────────── */
+    .marquee-section {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0; overflow: hidden; background: var(--cream);
+    }
+    .marquee-track { display: flex; width: max-content; animation: marquee 26s linear infinite; }
+    .marquee-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0 3rem; font-family: var(--serif); font-style: italic;
+      font-size: 1.0625rem; color: var(--mid); white-space: nowrap;
+    }
+    .marquee-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* ─── SERVICES ────────────────────────────────────────── */
+    #services { padding: clamp(5rem,10vh,8rem) 0; background: var(--black); color: var(--white); }
+    #services .tag { color: var(--gold-light); }
+
+    .services-header {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      align-items: end; margin-bottom: clamp(3rem,6vh,5rem);
+    }
+    .services-header h2 {
+      font-family: var(--serif); font-size: clamp(2.25rem,4.5vw,3.75rem);
+      font-weight: 700; line-height: 1.1;
+    }
+    .services-header h2 em { font-style: italic; color: var(--gold-light); }
+    .services-header-right p { font-size: 1rem; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 1.75rem; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5px; background: rgba(255,255,255,0.08); }
+    .service-card {
+      background: var(--black); padding: 2.5rem; position: relative;
+      overflow: hidden; transition: background 0.3s ease;
+    }
+    .service-card:hover { background: #191919; }
+
+    .service-num {
+      font-family: var(--serif); font-size: 4rem; font-weight: 900;
+      color: rgba(255,255,255,0.05); line-height: 1;
+      position: absolute; top: 1rem; right: 1.5rem; user-select: none;
+    }
+    .service-icon {
+      width: 44px; height: 44px; border: 1px solid rgba(196,154,56,0.4);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; margin-bottom: 1.5rem; color: var(--gold-light);
+    }
+    .service-icon svg { width: 20px; height: 20px; }
+    .service-card h3 { font-size: 1.0625rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .service-card p { font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+    .service-tag {
+      display: inline-block; margin-top: 1.25rem; font-size: 0.625rem;
+      font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 2px;
+    }
+
+    /* ─── FEATURED CONTENT ────────────────────────────────── */
+    #content { padding: clamp(5rem,10vh,8rem) 0; }
+    .content-header { text-align: center; margin-bottom: clamp(2.5rem,5vh,4rem); }
+    .content-header h2 { font-family: var(--serif); font-size: clamp(2.25rem,4vw,3.5rem); font-weight: 700; line-height: 1.1; }
+    .content-header p { font-size: 1rem; color: var(--mid); margin-top: 0.875rem; }
+
+    .content-tabs {
+      display: flex; justify-content: center; gap: 0.25rem; margin-bottom: 2.5rem;
+      background: var(--off-white); border: 1px solid var(--border); border-radius: 4px;
+      width: fit-content; margin-left: auto; margin-right: auto; padding: 4px;
+    }
+    .content-tab {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.5rem 1.25rem; border-radius: 2px; cursor: pointer; color: var(--mid);
+      border: none; background: transparent; font-family: var(--sans); transition: all 0.2s ease;
+    }
+    .content-tab.active { background: var(--black); color: var(--white); }
+    .content-tab:hover:not(.active) { color: var(--black); }
+
+    /* Bento grid */
+    .content-bento { display: grid; grid-template-columns: repeat(12,1fr); gap: 1rem; }
+    .bento-item { border-radius: 4px; overflow: hidden; position: relative; }
+    .bento-1 { grid-column: span 5; grid-row: span 2; }
+    .bento-2 { grid-column: span 4; }
+    .bento-3 { grid-column: span 3; }
+    .bento-4 { grid-column: span 4; }
+    .bento-5 { grid-column: span 3; }
+    .bento-6 { grid-column: span 5; }
+    .bento-7 { grid-column: span 4; }
+    .bento-8 { grid-column: span 3; }
+
+    .bento-card {
+      width: 100%; height: 100%; min-height: 220px;
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 1.25rem;
+    }
+    .bento-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.5s ease; }
+    .bento-card:hover .bento-bg { transform: scale(1.04); }
+    .bento-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, transparent 60%); }
+    .bento-meta { position: relative; z-index: 2; }
+    .bento-platform { font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.3rem; }
+    .bento-title { font-size: 0.875rem; font-weight: 600; color: var(--white); line-height: 1.35; }
+    .bento-stats { display: flex; gap: 0.875rem; margin-top: 0.5rem; }
+    .bento-stat { font-size: 0.625rem; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 0.3rem; }
+
+    .bg-amber  { background: linear-gradient(135deg, #C49A38 0%, #8B5C1A 100%); }
+    .bg-sage   { background: linear-gradient(135deg, #6B8F6A 0%, #3A5438 100%); }
+    .bg-navy   { background: linear-gradient(135deg, #1C2E4A 0%, #0B1424 100%); }
+    .bg-terra  { background: linear-gradient(135deg, #B5694A 0%, #7A3520 100%); }
+    .bg-blush  { background: linear-gradient(135deg, #C78A8A 0%, #9A5050 100%); }
+    .bg-stone  { background: linear-gradient(135deg, #8A7D6A 0%, #5C4E3C 100%); }
+    .bg-mocha  { background: linear-gradient(135deg, #7A5C3C 0%, #4A3020 100%); }
+    .bg-slate  { background: linear-gradient(135deg, #5C6B7A 0%, #2A3844 100%); }
+
+    .play-btn {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255,255,255,0.2); backdrop-filter: blur(8px);
+      border: 2px solid rgba(255,255,255,0.6);
+      display: flex; align-items: center; justify-content: center; z-index: 2;
+      transition: background 0.25s ease;
+    }
+    .bento-card:hover .play-btn { background: rgba(255,255,255,0.35); }
+    .play-btn svg { width: 18px; height: 18px; fill: white; margin-left: 3px; }
+
+    /* ─── BRANDS ──────────────────────────────────────────── */
+    #brands {
+      padding: clamp(4rem,8vh,6rem) 0; background: var(--off-white);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .brands-eyebrow { text-align: center; margin-bottom: 2.5rem; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mid); }
+    .brands-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.25rem 2.5rem; }
+    .brand-pill {
+      padding: 0.875rem 2rem; background: var(--white);
+      border: 1px solid var(--border); border-radius: 999px;
+      font-family: var(--serif); font-size: 1.0625rem; font-weight: 700;
+      color: var(--charcoal); transition: all 0.25s ease;
+    }
+    .brand-pill:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(196,154,56,0.12); }
+
+    /* ─── TESTIMONIALS ────────────────────────────────────── */
+    #testimonials { padding: clamp(5rem,10vh,8rem) 0; }
+    .testimonials-header { text-align: center; margin-bottom: clamp(3rem,6vh,5rem); }
+    .testimonials-header h2 { font-family: var(--serif); font-size: clamp(2.25rem,4vw,3.5rem); font-weight: 700; line-height: 1.1; }
+
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .testi-card {
+      background: var(--white); border: 1px solid var(--border); border-radius: 4px;
+      padding: 2rem; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testi-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.06); }
+    .testi-logo { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 0.625rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); opacity: 0.45; }
+    .testi-quote { font-family: var(--serif); font-size: 2.5rem; color: var(--gold-light); line-height: 1; margin-bottom: 1rem; }
+    .testi-text { font-size: 0.9375rem; color: var(--charcoal); line-height: 1.75; margin-bottom: 1.5rem; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 0.875rem; }
+    .testi-avatar { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+    .avatar-img { width: 100%; height: 100%; }
+    .testi-info strong { display: block; font-size: 0.875rem; font-weight: 600; }
+    .testi-info span { font-size: 0.75rem; color: var(--mid); }
+
+    /* ─── CTA ─────────────────────────────────────────────── */
+    #cta {
+      padding: clamp(5rem,12vh,9rem) 0; background: var(--black);
+      color: var(--white); text-align: center; position: relative; overflow: hidden;
+    }
+    #cta::before {
+      content: ''; position: absolute; top: -30%; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,154,56,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-tag { color: var(--gold-light); margin-bottom: 1.25rem; }
+    #cta h2 {
+      font-family: var(--serif); font-size: clamp(2.75rem,6vw,5.5rem);
+      font-weight: 900; line-height: 1.0; max-width: 700px; margin: 0 auto 1.5rem;
+    }
+    #cta h2 em { font-style: italic; color: var(--gold-light); }
+    #cta > .container > p { font-size: 1.0625rem; color: rgba(255,255,255,0.55); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.75; }
+    .cta-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .cta-note { margin-top: 1.5rem; font-size: 0.75rem; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
+
+    /* ─── CONTACT ─────────────────────────────────────────── */
+    #contact { padding: clamp(5rem,10vh,8rem) 0; }
+    .contact-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(3rem,6vw,6rem); align-items: start; }
+
+    .contact-info h2 { font-family: var(--serif); font-size: clamp(2rem,3.5vw,3rem); font-weight: 700; line-height: 1.15; margin-bottom: 1rem; }
+    .contact-info p { font-size: 0.9375rem; color: var(--mid); line-height: 1.75; margin-bottom: 2rem; }
+
+    .contact-detail { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.875rem; font-size: 0.875rem; color: var(--charcoal); }
+    .contact-detail svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; flex-shrink: 0; }
+
+    .social-links { display: flex; gap: 0.75rem; margin-top: 2rem; }
+    .social-link {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); display: flex; align-items: center;
+      justify-content: center; color: var(--mid); transition: all 0.25s ease;
+    }
+    .social-link:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .social-link svg { width: 16px; height: 16px; }
+
+    .contact-form { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 2.5rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .form-group label { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: var(--sans); font-size: 0.9375rem; color: var(--black);
+      background: var(--cream); border: 1px solid var(--border); border-radius: 2px;
+      padding: 0.75rem 1rem; outline: none; transition: border-color 0.2s ease; width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit { width: 100%; justify-content: center; }
+
+    /* ─── FOOTER ──────────────────────────────────────────── */
+    footer { background: var(--black); color: rgba(255,255,255,0.45); padding: 2.5rem 0; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; color: var(--white); }
+    .footer-copy { font-size: 0.75rem; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-size: 0.75rem; color: rgba(255,255,255,0.45); transition: color 0.2s ease; }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ─── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+      .bento-1 { grid-column: span 7; }
+      .bento-2 { grid-column: span 5; }
+      .bento-3, .bento-4 { grid-column: span 6; }
+      .bento-5, .bento-6 { grid-column: span 6; }
+      .bento-7, .bento-8 { grid-column: span 6; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-image-wrap { max-width: 400px; }
+      .about-accent { display: none; }
+      .services-header { grid-template-columns: 1fr; gap: 1.5rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .content-bento { grid-template-columns: 1fr 1fr; }
+      .bento-1,.bento-2,.bento-3,.bento-4,.bento-5,.bento-6,.bento-7,.bento-8 { grid-column: span 1; grid-row: span 1; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .stats-inner { display: grid; grid-template-columns: 1fr 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .content-bento { display: flex; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ───────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Sloane Avery</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#testimonials">Press</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Work With Me</a>
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ─── HERO ──────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <span class="hero-initial" aria-hidden="true">S</span>
+
+  <div class="hero-content container">
+    <div class="hero-eyebrow">Lifestyle Creator &amp; Brand Partner &mdash; Los Angeles</div>
+    <h1 class="hero-name">Sloane<br><em>Avery.</em></h1>
+    <p class="hero-tagline">
+      Curating real moments. Building genuine connections. Turning audiences into communities that brands actually want to reach.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-gold">Work With Me</a>
+      <a href="#content" class="btn" style="background:transparent;color:rgba(255,255,255,0.8);border:1.5px solid rgba(255,255,255,0.35);">See My Work</a>
+    </div>
+  </div>
+
+  <span class="hero-scroll" aria-hidden="true">Scroll to explore</span>
+</section>
+
+
+<!-- ─── STATS ─────────────────────────────────────────────── -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item reveal"><div class="stat-num">1.2M</div><div class="stat-label">Instagram Followers</div></div>
+      <div class="stat-item reveal"><div class="stat-num">890K</div><div class="stat-label">YouTube Subscribers</div></div>
+      <div class="stat-item reveal"><div class="stat-num">2.4M</div><div class="stat-label">TikTok Fans</div></div>
+      <div class="stat-item reveal"><div class="stat-num">4.8%</div><div class="stat-label">Avg. Engagement Rate</div></div>
+      <div class="stat-item reveal"><div class="stat-num">60+</div><div class="stat-label">Brand Collaborations</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ─── ABOUT ─────────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-image-wrap reveal">
+        <div class="about-photo">
+          <div class="about-photo-quote"><em>"Authenticity<br>is the new<br>aesthetic."</em></div>
+        </div>
+        <div class="about-accent"></div>
+        <div class="about-badge">
+          <strong>5+</strong>
+          <span>Years<br>Creating</span>
+        </div>
+      </div>
+
+      <div class="about-text reveal">
+        <span class="tag">About Sloane</span>
+        <h2>Fashion. Travel.<br><em>Real Life.</em></h2>
+        <p>
+          I'm Sloane — a Los Angeles-based content creator, style curator, and brand storyteller with an obsession for experiences that actually matter. I built my audience the old-fashioned way: by showing up every single day with content that's equal parts beautiful and honest.
+        </p>
+        <p>
+          From boutique hotels in Positano to morning routines in my Silver Lake apartment, my content lives at the intersection of elevated aesthetics and genuine living. My community trusts my recommendations because they know I'd never put my name on something I don't believe in.
+        </p>
+        <p>
+          When I'm not filming, you'll find me at a farmers market, deep in a design exhibition, or hunting for the best natural wine in whatever city I happen to be in that week.
+        </p>
+
+        <div class="about-platforms">
+          <div class="platform-chip">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </div>
+          <div class="platform-chip">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            YouTube
+          </div>
+          <div class="platform-chip">
+            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            TikTok
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── MARQUEE ────────────────────────────────────────────── -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="marquee-dot"></span>Style &amp; Fashion</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Luxury Travel</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Clean Beauty</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Home &amp; Lifestyle</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Wellness</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Restaurant &amp; Food</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Brand Storytelling</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Style &amp; Fashion</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Luxury Travel</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Clean Beauty</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Home &amp; Lifestyle</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Wellness</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Restaurant &amp; Food</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Brand Storytelling</div>
+  </div>
+</div>
+
+
+<!-- ─── SERVICES ──────────────────────────────────────────── -->
+<section id="services">
+  <div class="container">
+
+    <div class="services-header">
+      <div>
+        <span class="tag">Work With Me</span>
+        <h2>Partnerships built on <em>trust,</em> not just reach.</h2>
+      </div>
+      <div class="services-header-right">
+        <p>Every collaboration is tailored — never templated. I bring strategy, visual direction, and genuine audience trust to every brand I partner with. Here's how we build something together.</p>
+        <a href="#contact" class="btn btn-gold">Start a Conversation</a>
+      </div>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <span class="service-num">01</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Sponsored Content</h3>
+        <p>Organic-feeling feed posts, Reels, TikToks, and YouTube integrations crafted to align with your brand voice and my audience's expectations.</p>
+        <span class="service-tag">Instagram &middot; TikTok &middot; YouTube</span>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">02</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <h3>Brand Ambassadorship</h3>
+        <p>Long-term seasonal partnerships where your brand becomes part of my ongoing narrative — not a one-time mention. Ideal for luxury, beauty, and travel brands.</p>
+        <span class="service-tag">3&ndash;12 Month Campaigns</span>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">03</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Creative Direction</h3>
+        <p>Need a fresh visual perspective? I offer consulting, shoot direction, and campaign concepting — bringing the creator's eye to your in-house team.</p>
+        <span class="service-tag">Strategy &middot; Art Direction</span>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">04</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Event Appearances</h3>
+        <p>In-person activations, product launches, press trips, and panel hosting. I create live content and on-the-ground coverage that extends reach beyond the event itself.</p>
+        <span class="service-tag">Activations &middot; Press Trips</span>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">05</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Product Gifting &amp; Reviews</h3>
+        <p>Honest, editorial-quality product features across Stories and Reels with real usage context. Perfect for launches where authenticity matters more than polish.</p>
+        <span class="service-tag">Organic Integration</span>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">06</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Performance Campaigns</h3>
+        <p>Affiliate, discount code, and conversion-focused campaigns with detailed reporting. I track what actually converts, not just what looks good in a media kit.</p>
+        <span class="service-tag">Tracked ROI &middot; Reporting</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── FEATURED CONTENT ───────────────────────────────────── -->
+<section id="content">
+  <div class="container">
+
+    <div class="content-header reveal">
+      <span class="tag">Featured Content</span>
+      <h2>Work that speaks<br>for itself.</h2>
+      <p>A selection of recent campaigns, editorials, and original series.</p>
+    </div>
+
+    <div class="content-tabs">
+      <button class="content-tab active">All</button>
+      <button class="content-tab">Fashion</button>
+      <button class="content-tab">Travel</button>
+      <button class="content-tab">Beauty</button>
+    </div>
+
+    <div class="content-bento">
+
+      <div class="bento-item bento-1">
+        <div class="bento-card">
+          <div class="bento-bg bg-amber"></div>
+          <div class="bento-overlay"></div>
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+          <div class="bento-meta">
+            <div class="bento-platform">YouTube Series &middot; 4 Episodes</div>
+            <div class="bento-title">"The Edit" &mdash; A Slow Fashion Travel Diary Through Southern Europe</div>
+            <div class="bento-stats">
+              <span class="bento-stat">2.1M views</span>
+              <span class="bento-stat">148K likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-item bento-2">
+        <div class="bento-card">
+          <div class="bento-bg bg-blush"></div>
+          <div class="bento-overlay"></div>
+          <div class="bento-meta">
+            <div class="bento-platform">Instagram &middot; Sponsored</div>
+            <div class="bento-title">Glow Recipe Summer Skin Campaign &mdash; 5-Post Series</div>
+            <div class="bento-stats">
+              <span class="bento-stat">820K impressions</span>
+              <span class="bento-stat">6.2% engagement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-item bento-3">
+        <div class="bento-card">
+          <div class="bento-bg bg-sage"></div>
+          <div class="bento-overlay"></div>
+          <div class="bento-meta">
+            <div class="bento-platform">TikTok &middot; Organic</div>
+            <div class="bento-title">Farmer's Market Morning Routine &mdash; Viral Moment</div>
+            <div class="bento-stats">
+              <span class="bento-stat">4.8M plays</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-item bento-4">
+        <div class="bento-card">
+          <div class="bento-bg bg-navy"></div>
+          <div class="bento-overlay"></div>
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+          <div class="bento-meta">
+            <div class="bento-platform">YouTube &middot; Revolve Partnership</div>
+            <div class="bento-title">REVOLVE Festival Weekend &mdash; Full Vlog</div>
+            <div class="bento-stats">
+              <span class="bento-stat">1.3M views</span>
+              <span class="bento-stat">95K likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-item bento-5">
+        <div class="bento-card">
+          <div class="bento-bg bg-terra"></div>
+          <div class="bento-overlay"></div>
+          <div class="bento-meta">
+            <div class="bento-platform">Instagram Reels &middot; Olaplex</div>
+            <div class="bento-title">My 7-Step Hair Transformation</div>
+            <div class="bento-stats">
+              <span class="bento-stat">512K plays</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-item bento-6">
+        <div class="bento-card">
+          <div class="bento-bg bg-mocha"></div>
+          <div class="bento-overlay"></div>
+          <div class="bento-meta">
+            <div class="bento-platform">YouTube &middot; Travel Series</div>
+            <div class="bento-title">48 Hours in Kyoto &mdash; Marriott Bonvoy Partner</div>
+            <div class="bento-stats">
+              <span class="bento-stat">980K views</span>
+              <span class="bento-stat">72K likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-item bento-7">
+        <div class="bento-card">
+          <div class="bento-bg bg-stone"></div>
+          <div class="bento-overlay"></div>
+          <div class="bento-meta">
+            <div class="bento-platform">TikTok &middot; Style</div>
+            <div class="bento-title">Quiet Luxury Outfits Under $200 &mdash; Amazon Fashion</div>
+            <div class="bento-stats">
+              <span class="bento-stat">3.1M plays</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-item bento-8">
+        <div class="bento-card">
+          <div class="bento-bg bg-slate"></div>
+          <div class="bento-overlay"></div>
+          <div class="bento-meta">
+            <div class="bento-platform">Instagram &middot; Dior Beauty</div>
+            <div class="bento-title">Holiday Glam &mdash; Dior Rouge Lip Campaign</div>
+            <div class="bento-stats">
+              <span class="bento-stat">410K impressions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── BRANDS ────────────────────────────────────────────── -->
+<section id="brands">
+  <div class="container">
+    <p class="brands-eyebrow">Trusted by brands that value real audiences</p>
+    <div class="brands-grid reveal">
+      <div class="brand-pill">Revolve</div>
+      <div class="brand-pill">Dior Beauty</div>
+      <div class="brand-pill">Marriott Bonvoy</div>
+      <div class="brand-pill">Glow Recipe</div>
+      <div class="brand-pill">Olaplex</div>
+      <div class="brand-pill">Amazon Fashion</div>
+      <div class="brand-pill">Away</div>
+      <div class="brand-pill">Glossier</div>
+      <div class="brand-pill">Alo Yoga</div>
+      <div class="brand-pill">Net-a-Porter</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── TESTIMONIALS ──────────────────────────────────────── -->
+<section id="testimonials">
+  <div class="container">
+
+    <div class="testimonials-header reveal">
+      <span class="tag">What Brands Say</span>
+      <h2>Results people<br>actually talk about.</h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testi-card reveal">
+        <div class="testi-logo">Revolve</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Sloane's content outperformed every other creator in our Festival campaign — by a wide margin. Her audience actually listens to her. We booked a second campaign before the first one even launched.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <svg class="avatar-img" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#E8C97A"/><circle cx="21" cy="17" r="8" fill="#C49A38"/><ellipse cx="21" cy="36" rx="13" ry="9" fill="#C49A38"/></svg>
+          </div>
+          <div class="testi-info">
+            <strong>Danielle Park</strong>
+            <span>Senior Partnerships, Revolve</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-logo">Glow Recipe</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">We've worked with hundreds of creators and Sloane is one of the rare few who brings genuine editorial instinct. Her photos look like our brand team shot them — but her audience trusts them because she did.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <svg class="avatar-img" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#EDCECB"/><circle cx="21" cy="17" r="8" fill="#C78A8A"/><ellipse cx="21" cy="36" rx="13" ry="9" fill="#C78A8A"/></svg>
+          </div>
+          <div class="testi-info">
+            <strong>Sarah Kim</strong>
+            <span>Influencer Marketing Lead, Glow Recipe</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-logo">Marriott Bonvoy</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">The Kyoto series exceeded every KPI we set. More than the numbers, Sloane captured our properties in a way that felt aspirational without feeling out of reach — which is exactly the audience we want.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <svg class="avatar-img" viewBox="0 0 42 42"><circle cx="21" cy="21" r="21" fill="#6B8F6A"/><circle cx="21" cy="17" r="8" fill="#3A5438"/><ellipse cx="21" cy="36" rx="13" ry="9" fill="#3A5438"/></svg>
+          </div>
+          <div class="testi-info">
+            <strong>Marcus Webb</strong>
+            <span>Brand Experience, Marriott Bonvoy</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── CTA ───────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container">
+    <span class="tag cta-tag">Let's Build Something</span>
+    <h2>Your brand deserves<br><em>an audience that cares.</em></h2>
+    <p>I'm selective about who I work with — not because I have to be, but because my audience expects it. If your brand is the right fit, let's talk.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn btn-gold">Work With Me</a>
+      <a href="mailto:partnerships@sloavery.com" class="btn btn-white">partnerships@sloavery.com</a>
+    </div>
+    <p class="cta-note">Currently accepting Q3 2026 partnerships &nbsp;&mdash;&nbsp; Limited availability</p>
+  </div>
+</section>
+
+
+<!-- ─── CONTACT ────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <span class="tag">Get In Touch</span>
+        <h2>Ready to<br>collaborate?</h2>
+        <p>Whether you're a brand ready to invest in creator partnerships or a fellow creator interested in collaborating, I'd love to hear from you.</p>
+
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          partnerships@sloavery.com
+        </div>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          Los Angeles, CA &amp; New York, NY
+        </div>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Response time: within 48 hours
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Alex" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Rivera" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="alex@yourbrand.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Brand / Company</label>
+            <input type="text" id="company" name="company" placeholder="Your Brand Name" />
+          </div>
+
+          <div class="form-group">
+            <label for="ptype">Partnership Type</label>
+            <select id="ptype" name="ptype">
+              <option value="">Select an option...</option>
+              <option>Sponsored Content</option>
+              <option>Brand Ambassadorship</option>
+              <option>Creative Direction</option>
+              <option>Event Appearance</option>
+              <option>Product Gifting</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Estimated Budget</label>
+            <select id="budget" name="budget">
+              <option value="">Select a range...</option>
+              <option>Under $5,000</option>
+              <option>$5,000 – $15,000</option>
+              <option>$15,000 – $30,000</option>
+              <option>$30,000 – $75,000</option>
+              <option>$75,000+</option>
+              <option>Let's discuss</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Me About Your Brand</label>
+            <textarea id="message" name="message" placeholder="Share a bit about your brand, campaign goals, and timeline — the more context the better."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-dark form-submit">
+            Send My Inquiry
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-logo">Sloane Avery</span>
+      <span class="footer-copy">&copy; 2026 Sloane Avery. All rights reserved.</span>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Media Kit</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Sticky nav
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Tab UI
+  document.querySelectorAll('.content-tab').forEach(tab => {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.innerHTML = 'Message Sent ✓';
+    btn.style.background = '#3d7a42';
+    btn.disabled = true;
+  }
+
+  // Mobile nav toggle
+  document.getElementById('hamburger').addEventListener('click', () => {
+    const links = document.querySelector('.nav-links');
+    const cta = document.querySelector('.nav-cta');
+    const open = links.style.display === 'flex';
+    links.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(250,247,242,0.98);padding:1.5rem 2rem;gap:1.25rem;box-shadow:0 4px 16px rgba(0,0,0,0.08);';
+    if (cta) cta.style.display = open ? 'none' : 'none';
+  });
+</script>
+
+<!-- ─── DEMO CTA ─────────────────────────────────────────── -->
+<div style="background:#0D1B2A;border-top:3px solid #C9A84C;padding:2rem 1.5rem;text-align:center;">
+  <div style="max-width:700px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;">
+    <p style="color:#cfd8dc;font-size:1.05rem;margin:0;font-family:'Inter',Arial,sans-serif;line-height:1.5;">Interested in a website like this for your business?</p>
+    <a href="https://digitalopsystems.com/contact.html"
+       style="display:inline-block;padding:0.75rem 1.75rem;background:#C9A84C;color:#0D1B2A;text-decoration:none;border-radius:4px;font-weight:700;font-size:0.95rem;font-family:'Inter',Arial,sans-serif;white-space:nowrap;"
+       onmouseover="this.style.background='#b5943e'"
+       onmouseout="this.style.background='#C9A84C'">Request Your Website</a>
+  </div>
+</div>
+
+</body>
+</html>
