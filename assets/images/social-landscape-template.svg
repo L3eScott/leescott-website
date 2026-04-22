@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628">
+<!--
+  DIGITAL OPS SYSTEMS — Social Media Landscape Template
+  Canvas: 1200 × 628 px  |  LinkedIn · Facebook
+  ─────────────────────────────────────────────────────────────
+  HOW TO EDIT:
+  1. Replace the three <text> headline lines (marked HEADLINE)
+  2. Replace the two <text> subtext lines (marked SUBTEXT)
+  3. Optionally replace the stat in the right panel (marked STAT)
+  4. Keep logo, footer, accents unchanged
+
+  FONT: Inter (700 / 800 weight). Fallback: Helvetica Neue, Arial.
+  ─────────────────────────────────────────────────────────────
+-->
+<defs>
+  <pattern id="ldots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+    <circle cx="11" cy="11" r="0.75" fill="#0D1B2A" opacity="0.045"/>
+  </pattern>
+</defs>
+
+<!-- ── Background ──────────────────────────────────────────── -->
+<rect width="1200" height="628" fill="#FFFFFF"/>
+<rect x="0" y="0" width="752" height="628" fill="url(#ldots)"/>
+
+<!-- ── Accent Bars ─────────────────────────────────────────── -->
+<!-- Gold top bar (full width) -->
+<rect x="0" y="0" width="1200" height="6" fill="#C9A84C"/>
+<!-- Navy left bar -->
+<rect x="0" y="6" width="6" height="566" fill="#0D1B2A"/>
+
+<!-- ── Right panel ─────────────────────────────────────────── -->
+<!-- Navy background -->
+<rect x="752" y="6" width="448" height="566" fill="#0D1B2A"/>
+<!-- Gold left edge of panel -->
+<rect x="752" y="6" width="3" height="566" fill="#C9A84C" opacity="0.55"/>
+<!-- Subtle radial glow inside panel -->
+<circle cx="976" cy="289" r="200" fill="#C9A84C" opacity="0.025"/>
+<circle cx="976" cy="289" r="130" fill="#C9A84C" opacity="0.025"/>
+<!-- Decorative ring -->
+<circle cx="976" cy="289" r="168" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.1"/>
+
+<!-- Ghost brand mark — bottom right of panel -->
+<g transform="translate(888,185) scale(5.8)" opacity="0.055" fill="#ffffff" stroke="#ffffff">
+  <circle cx="10" cy="10" r="1.4"/>
+  <circle cx="20" cy="10" r="1.4"/>
+  <circle cx="30" cy="10" r="1.4"/>
+  <circle cx="10" cy="20" r="1.4"/>
+  <circle cx="20" cy="20" r="1.4"/>
+  <circle cx="30" cy="20" r="1.4"/>
+  <circle cx="10" cy="30" r="1.4"/>
+  <circle cx="20" cy="30" r="1.4"/>
+  <circle cx="30" cy="30" r="1.4"/>
+  <line x1="10" y1="10" x2="30" y2="10" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <line x1="30" y1="10" x2="30" y2="30" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <circle cx="10" cy="10" r="4.5"/>
+  <circle cx="30" cy="10" r="3.5"/>
+  <circle cx="30" cy="30" r="3.5"/>
+</g>
+
+<!-- ── Right panel — STAT (edit or remove this block) ──────── -->
+<!-- Stat number -->
+<text
+  x="976" y="256"
+  text-anchor="middle"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="88" font-weight="800" fill="#C9A84C">312%</text>
+<!-- Stat label line 1 -->
+<text
+  x="976" y="306"
+  text-anchor="middle"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="26" font-weight="400" fill="#ffffff" opacity="0.65">more leads captured</text>
+<!-- Gold underline for stat -->
+<line x1="892" y1="320" x2="1060" y2="320" stroke="#C9A84C" stroke-width="2" opacity="0.45"/>
+<!-- Stat sublabel -->
+<text
+  x="976" y="360"
+  text-anchor="middle"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="20" font-weight="600" fill="#C9A84C" opacity="0.7"
+  letter-spacing="3">AVERAGE CLIENT RESULT</text>
+
+<!-- Logo mark in panel (centered, bottom area) -->
+<g transform="translate(944,400) scale(2.2)">
+  <circle cx="10" cy="10" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <circle cx="20" cy="10" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <circle cx="30" cy="10" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <circle cx="10" cy="20" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <circle cx="20" cy="20" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <circle cx="30" cy="20" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <circle cx="10" cy="30" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <circle cx="20" cy="30" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <circle cx="30" cy="30" r="1.4" fill="#ffffff" opacity="0.12"/>
+  <line x1="10" y1="10" x2="30" y2="10" stroke="#C9A84C" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="30" y1="10" x2="30" y2="30" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="10" cy="10" r="4.5" fill="#C9A84C"/>
+  <circle cx="30" cy="10" r="3.5" fill="#ffffff"/>
+  <circle cx="30" cy="30" r="3.5" fill="#ffffff"/>
+</g>
+<text
+  x="976" y="510"
+  text-anchor="middle"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="18" font-weight="400" fill="#ffffff" opacity="0.42"
+  letter-spacing="1">digitalopsystems.com</text>
+
+<!-- ── Left panel content ──────────────────────────────────── -->
+<!-- Brand label -->
+<text
+  x="74" y="72"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="19" font-weight="700" fill="#C9A84C"
+  letter-spacing="4.5">DIGITAL OPS SYSTEMS</text>
+<line x1="74" y1="85" x2="380" y2="85" stroke="#C9A84C" stroke-width="1.5" opacity="0.35"/>
+
+<!-- ── HEADLINE — edit these three lines ──────────────────── -->
+<text
+  x="74" y="186"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="70" font-weight="800" fill="#0D1B2A">More Customers,</text>
+
+<text
+  x="74" y="270"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="70" font-weight="800" fill="#0D1B2A">Less Missed</text>
+
+<!-- Third line in gold — keep or change fill to #0D1B2A -->
+<text
+  x="74" y="354"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="70" font-weight="800" fill="#C9A84C">Opportunity.</text>
+
+<!-- ── Gold rule ────────────────────────────────────────────── -->
+<rect x="74" y="392" width="480" height="3" rx="1.5" fill="#C9A84C"/>
+
+<!-- ── SUBTEXT — edit these two lines ─────────────────────── -->
+<text
+  x="74" y="448"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="28" font-weight="400" fill="#0D1B2A" opacity="0.52">A website that works for your business, 24/7.</text>
+
+<text
+  x="74" y="488"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="28" font-weight="400" fill="#0D1B2A" opacity="0.52">Serving Louisiana &amp; Texas businesses.</text>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<!-- Gold divider -->
+<rect x="0" y="572" width="1200" height="4" fill="#C9A84C"/>
+<!-- Navy band -->
+<rect x="0" y="576" width="1200" height="52" fill="#0D1B2A"/>
+
+<!-- Logo mark in footer -->
+<g transform="translate(36,586) scale(1.1)">
+  <circle cx="10" cy="10" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <circle cx="20" cy="10" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <circle cx="30" cy="10" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <circle cx="10" cy="20" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <circle cx="20" cy="20" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <circle cx="30" cy="20" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <circle cx="10" cy="30" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <circle cx="20" cy="30" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <circle cx="30" cy="30" r="1.4" fill="#ffffff" opacity="0.14"/>
+  <line x1="10" y1="10" x2="30" y2="10" stroke="#C9A84C" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="30" y1="10" x2="30" y2="30" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="10" cy="10" r="4.5" fill="#C9A84C"/>
+  <circle cx="30" cy="10" r="3.5" fill="#ffffff"/>
+  <circle cx="30" cy="30" r="3.5" fill="#ffffff"/>
+</g>
+
+<!-- Wordmark in footer -->
+<text
+  x="118" y="602"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="20" font-weight="700" fill="#ffffff"
+  letter-spacing="1.8">DIGITAL OPS</text>
+<text
+  x="119" y="618"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="11" font-weight="500" fill="#C9A84C"
+  letter-spacing="5">SYSTEMS</text>
+
+<!-- URL right side -->
+<text
+  x="730" y="608"
+  text-anchor="end"
+  font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+  font-size="18" font-weight="400" fill="#ffffff" opacity="0.45">digitalopsystems.com</text>
+
+</svg>
