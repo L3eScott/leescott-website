@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Digital Ops Systems — Professional portrait">
+<defs>
+
+  <pattern id="pdots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="0.65" fill="#0D1B2A" opacity="0.06"/>
+  </pattern>
+
+  <radialGradient id="bgGlow" cx="50%" cy="62%" r="52%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#E6EBF4"/>
+    <stop offset="100%" stop-color="#F5F6FA"/>
+  </radialGradient>
+
+  <radialGradient id="skinGrad" cx="38%" cy="30%" r="62%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#E2BA92"/>
+    <stop offset="70%"  stop-color="#CC9660"/>
+    <stop offset="100%" stop-color="#C08E56"/>
+  </radialGradient>
+
+  <radialGradient id="skinNeck" cx="50%" cy="20%" r="60%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#D4A872"/>
+    <stop offset="100%" stop-color="#C08E56"/>
+  </radialGradient>
+
+  <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#162C42"/>
+    <stop offset="100%" stop-color="#0D1B2A"/>
+  </linearGradient>
+
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="28" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <filter id="cardShadow" x="-8%" y="-6%" width="116%" height="118%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#0D1B2A" flood-opacity="0.11"/>
+  </filter>
+
+</defs>
+
+<!-- ── Background ───────────────────────────────────────── -->
+<rect width="400" height="500" fill="url(#bgGlow)"/>
+<rect width="400" height="500" fill="url(#pdots)"/>
+
+<!-- Gold top accent bar -->
+<rect x="0" y="0" width="400" height="3" fill="#C9A84C"/>
+
+<!-- Soft halo / stage light behind figure -->
+<ellipse cx="200" cy="320" rx="195" ry="195" fill="#0D1B2A" opacity="0.030" filter="url(#glow)"/>
+<ellipse cx="200" cy="310" rx="145" ry="145" fill="#0D1B2A" opacity="0.022"/>
+
+<!-- ── Brand mark (top-right watermark) ─────────────────── -->
+<g transform="translate(348,18)" opacity="0.30">
+  <circle cx="10" cy="10" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <circle cx="18" cy="10" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <circle cx="26" cy="10" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <circle cx="10" cy="18" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <circle cx="18" cy="18" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <circle cx="26" cy="18" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <circle cx="10" cy="26" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <circle cx="18" cy="26" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <circle cx="26" cy="26" r="1.15" fill="#0D1B2A" opacity="0.45"/>
+  <line x1="10" y1="10" x2="26" y2="10" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="26" y1="10" x2="26" y2="26" stroke="#0D1B2A" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="10" cy="10" r="3.5" fill="#C9A84C"/>
+  <circle cx="26" cy="10" r="2.8" fill="#0D1B2A"/>
+  <circle cx="26" cy="26" r="2.8" fill="#0D1B2A"/>
+</g>
+
+<!-- ── Suit / Body ─────────────────────────────────────── -->
+
+<!-- Main jacket body -->
+<path d="
+  M 44 500
+  L 52 310
+  Q 72 265 128 252
+  L 168 244
+  L 174 276
+  L 200 292
+  L 226 276
+  L 232 244
+  L 272 252
+  Q 328 265 348 310
+  L 356 500 Z
+" fill="url(#suitGrad)"/>
+
+<!-- Left lapel -->
+<path d="
+  M 168 244
+  L 143 256
+  Q 114 268 104 290
+  L 163 316
+  L 174 276 Z
+" fill="#1D3550"/>
+
+<!-- Right lapel -->
+<path d="
+  M 232 244
+  L 257 256
+  Q 286 268 296 290
+  L 237 316
+  L 226 276 Z
+" fill="#1D3550"/>
+
+<!-- Jacket shadow / depth on shoulders -->
+<path d="M 52 310 Q 72 265 128 252 L 168 244 L 158 260 Q 110 272 90 310 Z" fill="#0D1B2A" opacity="0.18"/>
+<path d="M 348 310 Q 328 265 272 252 L 232 244 L 242 260 Q 290 272 310 310 Z" fill="#0D1B2A" opacity="0.18"/>
+
+<!-- Lapel fold crease lines -->
+<line x1="164" y1="249" x2="166" y2="310" stroke="#0D1B2A" stroke-width="0.8" opacity="0.28"/>
+<line x1="236" y1="249" x2="234" y2="310" stroke="#0D1B2A" stroke-width="0.8" opacity="0.28"/>
+
+<!-- White shirt / chest visible between lapels -->
+<path d="
+  M 174 276
+  L 163 316
+  L 200 330
+  L 237 316
+  L 226 276
+  L 213 284
+  L 200 292
+  L 187 284 Z
+" fill="#F4F7FB"/>
+
+<!-- Shirt button placket -->
+<line x1="200" y1="295" x2="200" y2="500" stroke="#DDE3ED" stroke-width="1.5" opacity="0.6"/>
+<circle cx="200" cy="350" r="2.8" fill="#CDD4E0" opacity="0.6"/>
+<circle cx="200" cy="374" r="2.8" fill="#CDD4E0" opacity="0.6"/>
+<circle cx="200" cy="398" r="2.8" fill="#CDD4E0" opacity="0.6"/>
+
+<!-- Shirt collar wings -->
+<path d="M 174 276 L 187 268 L 200 280 L 187 284 Z" fill="#F4F7FB"/>
+<path d="M 226 276 L 213 268 L 200 280 L 213 284 Z" fill="#F4F7FB"/>
+
+<!-- Gold tie -->
+<path d="
+  M 196 274
+  L 191 325
+  L 200 344
+  L 209 325
+  L 204 274
+  Q 202 267 200 265
+  Q 198 267 196 274 Z
+" fill="#C9A84C"/>
+<!-- Tie knot -->
+<path d="M 196 274 Q 200 269 204 274 Q 203 281 200 282 Q 197 281 196 274 Z" fill="#B8943A"/>
+<!-- Tie dimple / shadow -->
+<path d="M 197.5 279 Q 200 282 202.5 279" stroke="#B08030" stroke-width="0.8" fill="none" opacity="0.5"/>
+
+<!-- Pocket square -->
+<path d="M 250 302 L 258 293 L 268 299 L 276 291 L 281 305 L 250 305 Z" fill="#C9A84C" opacity="0.82"/>
+<rect x="250" y="305" width="31" height="16" rx="1" fill="#1D3550"/>
+
+<!-- ── Neck ──────────────────────────────────────────────── -->
+<path d="
+  M 184 244
+  Q 183 264 188 277
+  L 200 281
+  L 212 277
+  Q 217 264 216 244 Z
+" fill="url(#skinNeck)"/>
+
+<!-- Neck shadow sides -->
+<path d="M 184 244 Q 183 264 188 277 L 188 244 Z" fill="#B07845" opacity="0.2"/>
+<path d="M 216 244 Q 217 264 212 277 L 212 244 Z" fill="#B07845" opacity="0.2"/>
+
+<!-- ── Head ──────────────────────────────────────────────── -->
+
+<!-- Subtle depth/shadow beneath head -->
+<ellipse cx="202" cy="197" rx="67" ry="76" fill="#B07540" opacity="0.14"/>
+
+<!-- Main head shape -->
+<ellipse cx="200" cy="194" rx="66" ry="75" fill="url(#skinGrad)"/>
+
+<!-- Jawline / chin highlight -->
+<path d="M 152 228 Q 155 265 200 275 Q 245 265 248 228" fill="none" stroke="#B87848" stroke-width="0.8" opacity="0.12"/>
+
+<!-- ── Hair ──────────────────────────────────────────────── -->
+
+<!-- Main hair -->
+<path d="
+  M 139 172
+  Q 136 132 154 114
+  Q 172 98 200 96
+  Q 228 98 246 114
+  Q 264 132 261 172
+  Q 253 148 238 141
+  Q 222 135 200 133
+  Q 178 135 162 141
+  Q 147 148 139 172 Z
+" fill="#1A1E38"/>
+
+<!-- Hair left side -->
+<path d="
+  M 139 172
+  Q 136 192 138 212
+  Q 135 204 135 188
+  Q 136 178 139 172 Z
+" fill="#1A1E38"/>
+
+<!-- Hair right side -->
+<path d="
+  M 261 172
+  Q 264 192 262 212
+  Q 265 204 265 188
+  Q 264 178 261 172 Z
+" fill="#1A1E38"/>
+
+<!-- Hair highlight (sheen) -->
+<path d="
+  M 168 114
+  Q 184 106 200 104
+  Q 216 106 230 113
+  Q 214 108 200 107
+  Q 186 108 172 113 Z
+" fill="#282E52" opacity="0.55"/>
+
+<!-- Part / texture hint -->
+<path d="M 192 104 Q 194 115 195 130" stroke="#141830" stroke-width="1.2" fill="none" opacity="0.25"/>
+
+<!-- ── Ears ──────────────────────────────────────────────── -->
+
+<!-- Left ear -->
+<path d="
+  M 135 184
+  Q 126 190 125 200
+  Q 126 210 135 216
+  Q 131 210 130 200
+  Q 131 190 135 184 Z
+" fill="#C08056"/>
+<path d="M 130 194 Q 128 200 130 206" stroke="#A86840" stroke-width="1.3" fill="none" opacity="0.45"/>
+
+<!-- Right ear -->
+<path d="
+  M 265 184
+  Q 274 190 275 200
+  Q 274 210 265 216
+  Q 269 210 270 200
+  Q 269 190 265 184 Z
+" fill="#C08056"/>
+<path d="M 270 194 Q 272 200 270 206" stroke="#A86840" stroke-width="1.3" fill="none" opacity="0.45"/>
+
+<!-- ── Face Features ─────────────────────────────────────── -->
+
+<!-- Forehead highlight (light bounce) -->
+<ellipse cx="200" cy="160" rx="32" ry="18" fill="#FFFFFF" opacity="0.06"/>
+
+<!-- Eyebrows — strong, confident -->
+<path d="M 165 169 Q 178 162 196 165" stroke="#28200E" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+<path d="M 204 165 Q 222 162 235 169" stroke="#28200E" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+
+<!-- Brow highlight -->
+<path d="M 166 170 Q 179 164 194 167" stroke="#40300A" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M 206 167 Q 221 164 234 170" stroke="#40300A" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+
+<!-- ── Eyes ── -->
+<!-- Left eye white -->
+<ellipse cx="180" cy="187" rx="14.5" ry="10" fill="#FAFCFF"/>
+<!-- Left iris -->
+<ellipse cx="181" cy="188" rx="8.5" ry="8.5" fill="#2B4870"/>
+<!-- Left pupil -->
+<ellipse cx="181" cy="188" rx="5" ry="5" fill="#0E1420"/>
+<!-- Left eye light spec -->
+<circle cx="184.5" cy="185" r="2.8" fill="#FFFFFF" opacity="0.88"/>
+<circle cx="178" cy="191" r="1.2" fill="#FFFFFF" opacity="0.3"/>
+<!-- Left upper eyelid -->
+<path d="M 165 187 Q 181 178 196 187" stroke="#50301A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<!-- Left lower eyelid -->
+<path d="M 166 188 Q 181 196 196 188" stroke="#50301A" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.45"/>
+<!-- Left lashes hint -->
+<path d="M 165 187 L 162 183" stroke="#28200A" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M 170 182 L 168 178" stroke="#28200A" stroke-width="1.1" stroke-linecap="round"/>
+<path d="M 176 180 L 175 176" stroke="#28200A" stroke-width="1.1" stroke-linecap="round"/>
+
+<!-- Right eye white -->
+<ellipse cx="220" cy="187" rx="14.5" ry="10" fill="#FAFCFF"/>
+<!-- Right iris -->
+<ellipse cx="219" cy="188" rx="8.5" ry="8.5" fill="#2B4870"/>
+<!-- Right pupil -->
+<ellipse cx="219" cy="188" rx="5" ry="5" fill="#0E1420"/>
+<!-- Right eye light spec -->
+<circle cx="222.5" cy="185" r="2.8" fill="#FFFFFF" opacity="0.88"/>
+<circle cx="216" cy="191" r="1.2" fill="#FFFFFF" opacity="0.3"/>
+<!-- Right upper eyelid -->
+<path d="M 205 187 Q 219 178 234 187" stroke="#50301A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<!-- Right lower eyelid -->
+<path d="M 204 188 Q 219 196 234 188" stroke="#50301A" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.45"/>
+<!-- Right lashes hint -->
+<path d="M 234 187 L 237 183" stroke="#28200A" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M 230 181 L 232 177" stroke="#28200A" stroke-width="1.1" stroke-linecap="round"/>
+<path d="M 224 179 L 225 175" stroke="#28200A" stroke-width="1.1" stroke-linecap="round"/>
+
+<!-- Nose bridge -->
+<path d="M 198 195 L 196 209" stroke="#C0804A" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.22"/>
+<path d="M 202 195 L 204 209" stroke="#C0804A" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.22"/>
+
+<!-- Nose base -->
+<path d="M 193 214 Q 200 219 207 214" fill="none" stroke="#B07840" stroke-width="1.4" stroke-linecap="round" opacity="0.4"/>
+<!-- Nostrils -->
+<ellipse cx="193" cy="215" rx="5.5" ry="3.5" fill="#B07840" opacity="0.22"/>
+<ellipse cx="207" cy="215" rx="5.5" ry="3.5" fill="#B07840" opacity="0.22"/>
+
+<!-- Philtrum (upper lip groove) -->
+<path d="M 197 221 L 200 226 L 203 221" fill="none" stroke="#B07840" stroke-width="0.8" opacity="0.25"/>
+
+<!-- ── Mouth — confident, warm, professional smile ── -->
+<!-- Lips -->
+<path d="M 182 234 Q 191 228 200 230 Q 209 228 218 234 Q 209 238 200 237 Q 191 238 182 234 Z" fill="#C48060" opacity="0.55"/>
+<path d="M 183 234 Q 200 245 217 234 Q 200 248 183 234 Z" fill="#B87050" opacity="0.32"/>
+<!-- Mouth line / smile -->
+<path d="M 183 234 Q 200 244 217 234" stroke="#9A5835" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<!-- Corner of mouth smile crease hints -->
+<path d="M 183 234 Q 180 238 181 242" stroke="#B07040" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M 217 234 Q 220 238 219 242" stroke="#B07040" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/>
+
+<!-- Cheek warmth (subtle blush/glow) -->
+<ellipse cx="157" cy="212" rx="20" ry="13" fill="#D46055" opacity="0.055"/>
+<ellipse cx="243" cy="212" rx="20" ry="13" fill="#D46055" opacity="0.055"/>
+
+<!-- Chin highlight -->
+<ellipse cx="200" cy="258" rx="12" ry="6" fill="#E8BC90" opacity="0.22"/>
+
+<!-- ── Decorative Frame Elements ──────────────────────────── -->
+
+<!-- Left gold accent pillar -->
+<rect x="18" y="105" width="3" height="100" rx="1.5" fill="#C9A84C" opacity="0.45"/>
+<circle cx="19.5" cy="104" r="3.8" fill="#C9A84C" opacity="0.45"/>
+<circle cx="19.5" cy="205" r="3.8" fill="#C9A84C" opacity="0.45"/>
+
+<!-- Right subtle accent -->
+<rect x="379" y="145" width="2" height="60" rx="1" fill="#0D1B2A" opacity="0.08"/>
+
+<!-- Bottom subtle fade -->
+<rect x="0" y="445" width="400" height="55" fill="url(#bgGlow)" opacity="0.65"/>
+
+<!-- Bottom gold accent -->
+<rect x="0" y="497" width="400" height="3" fill="#C9A84C" opacity="0.30"/>
+
+</svg>

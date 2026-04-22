@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hero Illustration Preview — Digital Ops Systems</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #e8eaef; padding: 2.5rem 2rem; }
+    h1 { font-size: 0.75rem; font-weight: 600; color: #777; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2rem; }
+    .label { font-size: 0.7rem; color: #999; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .panel { background: #fff; border-radius: 10px; padding: 2rem; margin-bottom: 2rem; }
+    .panel.dark { background: #0D1B2A; }
+    .panel img, .panel object { display: block; max-width: 100%; border-radius: 4px; }
+    .dims { font-size: 0.68rem; color: #bbb; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Digital Ops Systems — Hero Illustration</h1>
+
+  <div class="label">Full size — light background</div>
+  <div class="panel">
+    <img src="hero-illustration.svg" width="800" height="450" alt="Hero illustration"/>
+    <div class="dims">800 × 450 · SVG scalable</div>
+  </div>
+
+  <div class="label">Responsive — fills container</div>
+  <div class="panel" style="padding: 0; overflow:hidden; border-radius:10px;">
+    <img src="hero-illustration.svg" style="width:100%;height:auto;display:block;" alt="Hero illustration responsive"/>
+  </div>
+
+  <div class="label">On dark background</div>
+  <div class="panel dark">
+    <img src="hero-illustration.svg" style="width:100%;height:auto;display:block;border-radius:6px;" alt="Hero illustration on dark"/>
+  </div>
+
+  <div class="label">Compact — 600px</div>
+  <div class="panel">
+    <img src="hero-illustration.svg" width="600" height="338" alt="Hero illustration compact"/>
+  </div>
+
+  <p style="font-size:0.75rem;color:#aaa;margin-top:2rem;">
+    File: <strong>assets/images/hero-illustration.svg</strong> &nbsp;·&nbsp;
+    Colors: Navy #0D1B2A · Gold #C9A84C · White #FFFFFF &nbsp;·&nbsp;
+    Fully scalable SVG — use at any size
+  </p>
+</body>
+</html>
