@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block dev-only preview pages
+Disallow: /assets/images/hero-preview.html
+Disallow: /assets/images/logo-preview.html
+Disallow: /assets/images/social-templates-preview.html
+
+# Block Google verification file
+Disallow: /google046aa32afe02f2e0.html
+
+Sitemap: https://digitalopsystems.com/sitemap.xml
