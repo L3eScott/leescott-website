@@ -1645,6 +1645,8 @@ footer {
   .section-title { font-size: 1.65rem; }
   .cta-section h2 { font-size: 1.65rem; }
   .page-hero h1, .page-hero h2 { font-size: 1.75rem; }
+  .process-grid { grid-template-columns: repeat(3, 1fr); }
+  .diff-grid { grid-template-columns: 1fr; }
 
   .service-header {
     flex-direction: column;
@@ -1673,6 +1675,9 @@ footer {
   .packages-grid { grid-template-columns: 1fr; }
   .workers-grid { grid-template-columns: 1fr; }
   .problem-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .stats-bar .container { flex-direction: column; gap: 1.5rem; align-items: center; }
 }
 
 /* =====================
@@ -1760,6 +1765,108 @@ footer {
 
 #founding-banner .btn-close:hover {
   color: var(--navy);
+}
+
+/* =====================
+   Process Steps
+   ===================== */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.process-step {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem 1.25rem;
+  position: relative;
+}
+
+.process-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 50%;
+  margin-bottom: 0.85rem;
+}
+
+.process-step h4 {
+  font-size: 0.97rem;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.process-step p {
+  color: var(--text-light);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* =====================
+   Differentiation Cards
+   ===================== */
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.diff-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+.diff-icon {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: 0.85rem;
+}
+
+.diff-card h4 {
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.diff-card p {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* =====================
+   Stat Benefit Tag
+   ===================== */
+.stat-benefit {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--navy);
+  opacity: 0.62;
+  margin-top: 0.2rem;
+  letter-spacing: 0.01em;
+}
+
+/* =====================
+   Bio H2 (homepage trust section)
+   ===================== */
+.bio-text h2 {
+  font-size: 1.85rem;
+  margin-bottom: 0.2rem;
 }
 
 @media (max-width: 540px) {
