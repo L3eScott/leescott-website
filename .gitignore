@@ -1,0 +1,43 @@
+# Secrets — NEVER commit
+.env
+.env.*
+*.env
+.envrc
+secrets/
+.secret
+.secrets/
+*.pem
+*.key
+*-credentials.json
+service-account*.json
+.npmrc
+.htpasswd
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS detritus
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build outputs (none expected for this static site, but defensive)
+node_modules/
+dist/
+build/
+out/
+.next/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Local-only previews
+*.local
+*.draft
