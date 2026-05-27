@@ -6,7 +6,7 @@
 This is the website for **Digital Ops Systems**, founded by Lee Scott.
 
 ## Domain
-`digitalopssystems.com` (double s — "ops" + "systems"). Any reference to `digitalopsystems.com` (single s) is a bug; correct it on sight.
+`digitalopsystems.com` (double s — "ops" + "systems"). Any reference to `digitalopsystems.com` (single s) is a bug; correct it on sight.
 
 ## Business Positioning
 Digital Ops Systems builds **Smart Websites + AI Automation Systems For Growing Businesses.** We are an AI-enabled operational systems consultancy, delivered through smart websites, workflows, reporting, and automation. We are not a generic agency.

@@ -9,4 +9,4 @@ Disallow: /assets/images/social-templates-preview.html
 # Block Google verification file
 Disallow: /google046aa32afe02f2e0.html
 
-Sitemap: https://digitalopssystems.com/sitemap.xml
+Sitemap: https://digitalopsystems.com/sitemap.xml
