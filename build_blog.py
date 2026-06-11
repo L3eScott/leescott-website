@@ -220,6 +220,11 @@ HEADER_TMPL = """<!DOCTYPE html>
 </head>
 <body>
 
+  <a href="{asset_prefix}index.html#mission" class="mission-badge" title="Our mission: help 100 business owners build something real">
+    <span class="count">1 / 100</span>
+    <span class="label">built so far</span>
+  </a>
+
   <header>
     <nav>
       <a href="{asset_prefix}index.html" class="logo">
@@ -309,11 +314,11 @@ POST_BODY_TMPL = """
     </div>
 
     <section class="cta-section">
-      <h2>Want a System Like This for Your Business?</h2>
-      <p>Smart websites, fast follow-up, and the operational backend behind them. Let's talk.</p>
+      <h2>It's not as hard as you think.</h2>
+      <p>The on-ramp is open. Give us a chance on a free 30-minute call &mdash; we'll look at where you are and tell you honestly what would actually help.</p>
       <div class="btn-pair">
         <a href="{asset_prefix}contact.html" class="btn">Schedule a Free Strategy Call</a>
-        <a href="{asset_prefix}services.html" class="btn-outline">View Services</a>
+        <a href="{asset_prefix}services.html" class="btn-outline">See the Packages</a>
       </div>
     </section>
 """

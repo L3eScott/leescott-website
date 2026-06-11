@@ -1882,3 +1882,44 @@ footer {
     justify-content: space-between;
   }
 }
+
+/* ─── Mission Counter Badge (Gate 3 — ratified 2026-06-06) ─────────────────── */
+.mission-badge {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  background: var(--gold, #C9A84C);
+  color: var(--navy, #0D1B2A);
+  padding: 8px 14px 8px 12px;
+  border-radius: 22px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  z-index: 1100;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.mission-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24);
+  color: var(--navy, #0D1B2A);
+  text-decoration: none;
+}
+.mission-badge .count {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+.mission-badge .label {
+  font-weight: 500;
+  opacity: 0.82;
+}
+@media (max-width: 900px) {
+  /* hide on tablet/mobile to avoid hamburger overlap; mission lives in #mission section */
+  .mission-badge { display: none; }
+}
