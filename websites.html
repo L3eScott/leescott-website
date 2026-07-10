@@ -25,6 +25,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/dops.css">
+<style>
+/* angled "free" seal with a gentle, always-visible pulse (never fully fades) */
+.free-seal{position:absolute;right:5.5%;top:52%;transform:translateY(-50%) rotate(-12deg);width:134px;height:134px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 10px 30px rgba(201,168,76,.42);z-index:6;animation:sealPulse 2.4s ease-in-out infinite}
+.free-seal .big{font-family:var(--disp);font-weight:800;font-size:27px;line-height:1;letter-spacing:.02em}
+.free-seal .sub{font-family:var(--body);font-weight:700;font-size:10px;margin-top:5px;padding:0 14px;line-height:1.25;text-transform:uppercase;letter-spacing:.05em}
+@keyframes sealPulse{0%,100%{transform:translateY(-50%) rotate(-12deg) scale(1);box-shadow:0 10px 30px rgba(201,168,76,.42)}50%{transform:translateY(-50%) rotate(-12deg) scale(1.055);box-shadow:0 0 28px 9px rgba(201,168,76,.5)}}
+@media(max-width:900px){.free-seal{position:static;margin:26px auto 0;transform:rotate(-8deg);animation:sealPulseM 2.4s ease-in-out infinite}
+  @keyframes sealPulseM{0%,100%{transform:rotate(-8deg) scale(1)}50%{transform:rotate(-8deg) scale(1.055)}}}
+@media(prefers-reduced-motion:reduce){.free-seal{animation:none}}
+</style>
 </head>
 <body>
 
@@ -32,7 +42,7 @@
   <div class="wrap hdr-in">
     <a class="brand" href="index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
     <nav class="nav" id="nav">
-      <a href="crm.html">Get Organized</a><a href="search-ai.html">Get Found</a><a href="websites.html">Websites</a><a href="index.html#about">About</a>
+      <a href="crm.html">Get Organized</a><a href="search-ai.html">Get Found</a><a href="ai-helper.html">AI Helper</a><a href="websites.html">Websites</a><a href="index.html#about">About</a>
       <a class="btn btn-gold" href="mailto:contact@digitalopsystems.com?subject=Website%20—%20free%20call">Book a free call</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -50,6 +60,7 @@
       <a class="btn btn-ghost-light" href="index.html#choose">See all three products</a>
     </div>
   </div>
+  <div class="free-seal" role="img" aria-label="Free website with a bundle"><span class="big">FREE</span><span class="sub">website with a bundle</span></div>
 </section>
 
 <section class="section">
@@ -75,7 +86,7 @@
 <footer class="ft"><div class="wrap">
   <div class="ft-top">
     <a class="brand" href="index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
-    <nav class="ft-links"><a href="crm.html">CRM</a><a href="search-ai.html">Search &amp; AI</a><a href="websites.html">Websites</a><a href="index.html#about">About</a><a href="mailto:contact@digitalopsystems.com">Contact</a></nav>
+    <nav class="ft-links"><a href="crm.html">CRM</a><a href="search-ai.html">Search &amp; AI</a><a href="ai-helper.html">AI Helper</a><a href="websites.html">Websites</a><a href="index.html#about">About</a><a href="mailto:contact@digitalopsystems.com">Contact</a></nav>
   </div>
   <div class="ft-bot"><span>© 2026 Digital Ops Systems. Helping 100 owners build something real.</span><span>Baton Rouge · Houston · contact@digitalopsystems.com</span></div>
 </div></footer>

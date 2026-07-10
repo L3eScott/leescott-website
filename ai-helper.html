@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Helper — Digital Ops Systems</title>
+<meta name="description" content="An AI assistant built into your workspace. Ask how to do anything in plain English and it walks you through the exact steps — and it never invents features it doesn't have.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://digitalopsystems.com/ai-helper.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Ops Systems">
+<meta property="og:title" content="AI Helper — Digital Ops Systems">
+<meta property="og:description" content="An assistant built into your workspace that answers 'how do I…' in plain English, using your real screen — and never makes things up.">
+<meta property="og:url" content="https://digitalopsystems.com/ai-helper.html">
+<meta property="og:image" content="https://digitalopsystems.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://digitalopsystems.com/assets/og.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","name":"AI Helper","serviceType":"In-app AI assistant for local-business software","provider":{"@type":"Organization","name":"Digital Ops Systems","url":"https://digitalopsystems.com/"},"areaServed":["Baton Rouge, LA","Houston, TX"],"description":"An AI assistant built into the Digital Ops Systems workspace. It answers how-to questions in plain English using the real on-screen steps, is off until the owner turns it on, and never invents features it does not have.","audience":{"@type":"Audience","audienceType":"Local business owners and their teams"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://digitalopsystems.com/"},{"@type":"ListItem","position":2,"name":"AI Helper","item":"https://digitalopsystems.com/ai-helper.html"}]}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/dops.css">
+<style>
+/* page-scoped: a small, on-brand product visual of the in-app assistant */
+.shot{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+@media(max-width:860px){.shot{grid-template-columns:1fr;gap:30px}}
+.ask-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh-lg);overflow:hidden;max-width:420px;margin-left:auto}
+@media(max-width:860px){.ask-card{margin:0 auto}}
+.ask-card .bar{background:var(--navy);color:#fff;font-family:var(--disp);font-weight:600;font-size:14px;padding:13px 16px;display:flex;align-items:center;gap:8px}
+.ask-card .bar .dot{margin-left:auto;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.ask-card .log{padding:18px 16px;display:flex;flex-direction:column;gap:12px;background:var(--paper)}
+.bub{max-width:86%;font-size:14px;line-height:1.55;border-radius:14px;padding:11px 14px}
+.bub.u{align-self:flex-end;background:var(--navy);color:#fff;border-bottom-right-radius:5px}
+.bub.a{align-self:flex-start;background:var(--white);border:1px solid var(--line);color:var(--ink);border-bottom-left-radius:5px}
+.bub.a b{color:var(--navy)}
+.bub.a ol{margin:6px 0 0;padding-left:18px}.bub.a li{margin:3px 0}
+.ask-card .composer{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--white)}
+.ask-card .composer .fake-in{flex:1;border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--slate);font-size:13px}
+.ask-card .composer .fake-send{background:var(--navy);color:#fff;border-radius:10px;padding:9px 15px;font-weight:600;font-size:13px}
+.reassure{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+.reassure .chip{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14.5px;font-weight:500;color:var(--ink);box-shadow:var(--sh-sm)}
+.reassure .chip svg{width:17px;height:17px;stroke:var(--gold-2);fill:none;stroke-width:1.9}
+.inc-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.14);border:1px solid rgba(201,168,76,.5);color:var(--gold);font-family:var(--body);font-weight:600;font-size:13.5px;padding:7px 15px;border-radius:999px}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
+    <nav class="nav" id="nav">
+      <a href="crm.html">Get Organized</a><a href="search-ai.html">Get Found</a><a href="ai-helper.html">AI Helper</a><a href="websites.html">Websites</a><a href="index.html#about">About</a>
+      <a class="btn btn-gold" href="mailto:contact@digitalopsystems.com?subject=AI%20Helper%20—%20free%20call">Book a free call</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="wrap phero-in">
+    <div class="crumb"><a href="index.html">Home</a> · AI Helper</div>
+    <p class="eyebrow">AI Helper</p>
+    <h1>Help is one question away — right inside your workspace.</h1>
+    <p>Ask the assistant how to do anything, in plain English, and it walks you through the exact steps — naming the real buttons on your screen. No thick manual, no waiting on support, no feeling lost. It's built right into your Digital Ops CRM.</p>
+    <div style="margin-top:22px"><span class="inc-pill">✓ Comes with the Digital Ops CRM</span></div>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="mailto:contact@digitalopsystems.com?subject=AI%20Helper%20—%20free%20call">Book a free call <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost-light" href="crm.html">See the full CRM</a>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="section">
+  <div class="wrap shot">
+    <div>
+      <p class="eyebrow">Like texting a patient coworker</p>
+      <h2 class="big">You ask the way you'd ask a person. It answers the way you'd hope a person would.</h2>
+      <p class="lead">It sits in the corner of your workspace as a little <b>✨ Ask</b> button. Open it, type your question, and it stays right there beside you while you follow the steps.</p>
+    </div>
+    <div class="ask-card" aria-hidden="true">
+      <div class="bar">✨ Ask <span class="dot"></span></div>
+      <div class="log">
+        <div class="bub u">How do I add a new customer?</div>
+        <div class="bub a">Here's how to add a customer:<ol><li>Click <b>+ Add customer</b> at the top right.</li><li>Fill in their name — that's the only required field.</li><li>Add phone, email or a birthday if you have them.</li><li>Click <b>Save customer</b>.</li></ol></div>
+        <div class="bub u">Can you text them for me?</div>
+        <div class="bub a">Your workspace doesn't send texts, so I can't do that here. If texting customers is something you'd like, the Digital Ops team can help you set it up.</div>
+      </div>
+      <div class="composer"><span class="fake-in">Ask how to do anything…</span><span class="fake-send">Ask</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT DOES -->
+<section class="section band">
+  <div class="wrap">
+    <div class="sec-head center">
+      <p class="eyebrow">What it does</p>
+      <h2 class="big">A guide to your own tools, built right in.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 10h8M8 14h5"/><path d="M4 5h16v12H8l-4 4z"/></svg></div><h3>Answers in plain English</h3><p>Ask "how do I add a customer?" and get clear, numbered steps that match exactly what's on your screen — no jargon.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-width="1.6"/></svg></div><h3>Always on, endlessly patient</h3><p>It's there any time, day or night, inside your workspace. Ask the same thing twice — it never makes you feel silly for it.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7z"/><path d="M9.5 12l1.8 1.8L15 10" stroke-width="1.6"/></svg></div><h3>It won't make things up</h3><p>If something isn't part of your workspace, it says so and points you to a real person on our team — no invented features, no bad advice.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="section">
+  <div class="wrap grid-2">
+    <div>
+      <p class="eyebrow">Why it's different</p>
+      <h2 class="big">Most software hands you a dashboard and wishes you luck.</h2>
+      <p class="lead">The fastest way to feel confident with a new tool is to have someone patient sitting beside you. That's what this is — built into the software you already use, so there's nothing extra to open or learn.</p>
+      <a class="btn btn-navy" href="mailto:contact@digitalopsystems.com?subject=AI%20Helper%20—%20free%20call" style="margin-top:24px">See it for yourself <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <ul class="checks">
+      <li><span class="ck">✓</span><span>No thick manual to read before you start</span></li>
+      <li><span class="ck">✓</span><span>New team members get useful on day one</span></li>
+      <li><span class="ck">✓</span><span>Stop stopping your day to hunt for how something works</span></li>
+      <li><span class="ck">✓</span><span>Plain language, never tech-speak</span></li>
+      <li><span class="ck">✓</span><span>Built in — nothing else to log into</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="section band">
+  <div class="wrap">
+    <div class="sec-head center"><p class="eyebrow">How it works</p><h2 class="big">On your terms, in three steps.</h2></div>
+    <div class="steps">
+      <div class="step"><h3>Turn it on</h3><p>The assistant is off until you switch it on for your workspace. It's your call, always.</p></div>
+      <div class="step"><h3>Ask like you'd ask a coworker</h3><p>Click <b>✨ Ask</b>, type your question in your own words, and hit ask.</p></div>
+      <div class="step"><h3>Follow along</h3><p>It answers using your real screen and stays open beside you while you do it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY / REASSURANCE -->
+<section class="section-sm">
+  <div class="wrap">
+    <div class="sec-head center" style="margin-bottom:24px"><p class="eyebrow">Private by design</p><h2 class="big">Your data stays yours.</h2></div>
+    <div class="reassure">
+      <span class="chip"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg> Off until you turn it on</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4" stroke-width="1.7"/></svg> Only ever sees your workspace</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7z"/></svg> Never used to train anyone else's AI</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S NEXT (honest roadmap) -->
+<section class="section band-navy">
+  <div class="wrap">
+    <div class="sec-head center">
+      <p class="eyebrow">Growing with you</p>
+      <h2 class="big">Today, your guide. Soon, your analyst.</h2>
+      <p class="lead" style="margin:0 auto;color:rgba(233,239,245,.82)">Right now the assistant is your always-on guide to using the workspace. Next — with your permission — it'll answer straight from your own numbers, like "who haven't I contacted in 90 days?", and help you draft the follow-up. You'll always be the one who hits send.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm">
+  <div class="wrap"><div class="cta">
+    <h2>Want to see it answer a real question?</h2>
+    <p>Book a free call and we'll open the workspace and let the assistant walk through whatever you throw at it.</p>
+    <div class="hero-cta"><a class="btn btn-gold" href="mailto:contact@digitalopsystems.com?subject=AI%20Helper%20—%20free%20call">Book a free call <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost-light" href="index.html">Back to overview</a></div>
+  </div></div>
+</section>
+
+<footer class="ft"><div class="wrap">
+  <div class="ft-top">
+    <a class="brand" href="index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
+    <nav class="ft-links"><a href="crm.html">CRM</a><a href="search-ai.html">Search &amp; AI</a><a href="ai-helper.html">AI Helper</a><a href="websites.html">Websites</a><a href="index.html#about">About</a><a href="mailto:contact@digitalopsystems.com">Contact</a></nav>
+  </div>
+  <div class="ft-bot"><span>© 2026 Digital Ops Systems. Helping 100 owners build something real.</span><span>Baton Rouge · Houston · contact@digitalopsystems.com</span></div>
+</div></footer>
+
+<script>
+  const t=document.getElementById('navToggle'), n=document.getElementById('nav');
+  t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+</script>
+</body>
+</html>
