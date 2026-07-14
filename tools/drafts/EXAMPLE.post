@@ -1,0 +1,16 @@
+# Draft spec for the Blog Publishing Pipe. Copy this, fill it in, run:
+#   python3 tools/publish_post.py tools/drafts/<yourfile>.post --dry-run
+# Then drop --dry-run to write for real. EEAT rule is enforced: the body
+# MUST contain at least one external (non-digitalopsystems.com) cited link.
+title: Example — How To Use This Pipe
+slug: example-how-to-use-this-pipe
+category: Business Strategy
+date: 2026-07-14
+emoji: 📝
+description: A throwaway example post demonstrating the Digital Ops Systems blog publishing pipe end to end.
+excerpt: A throwaway example showing how a draft spec becomes a live post, blog card, and sitemap entry in one command.
+---BODY---
+<p>This is an example body. Write in short paragraphs using raw HTML tags.</p>
+<h2>Use real headings</h2>
+<p>According to the U.S. Small Business Administration, small businesses make up the vast majority of American firms, per <a href="https://www.sba.gov/" target="_blank" rel="noopener noreferrer">the SBA</a>.</p>
+<p>Every published article must cite and link at least one real external source like the one above, or the pipe refuses to publish.</p>
