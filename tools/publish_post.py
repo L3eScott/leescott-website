@@ -71,7 +71,7 @@ def esc(s):
 def build_card(meta, filename):
     return (
 '          <div class="blog-card">\n'
-'            <div class="blog-img">%s</div>\n'
+'            <div class="blog-img"><img src="assets/images/%s" alt="" loading="lazy"></div>\n'
 '            <div class="blog-content">\n'
 '              <div class="blog-meta">\n'
 '                <span class="category">%s</span>\n'
@@ -83,7 +83,7 @@ def build_card(meta, filename):
 '              <a href="blog/%s" class="read-more">Read Article &rarr;</a>\n'
 '            </div>\n'
 '          </div>\n'
-    ) % (meta["emoji"], esc(meta["category"]), meta["date_human"],
+    ) % (meta.get("image", "thumb-default.jpg"), esc(meta["category"]), meta["date_human"],
          filename, esc(meta["title"]), esc(meta["excerpt"]), filename)
 
 def main():
