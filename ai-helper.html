@@ -185,6 +185,7 @@
 <script>
   const t=document.getElementById('navToggle'), n=document.getElementById('nav');
   t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  n.querySelectorAll('a').forEach(function(a){var href=a.getAttribute('href')||'';if(href.indexOf('#')>-1||href.indexOf('mailto:')>-1)return;var h=href.split('/').pop(),c=location.pathname.split('/').pop()||'index.html';if(h===c||(location.pathname.indexOf('/blog/')>-1&&h==='blog.html'))a.setAttribute('aria-current','page');});
 </script>
 </body>
 </html>
