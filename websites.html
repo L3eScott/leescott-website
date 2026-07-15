@@ -35,7 +35,14 @@
   @keyframes sealPulseM{0%,100%{transform:rotate(-8deg) scale(1)}50%{transform:rotate(-8deg) scale(1.055)}}}
 @media(prefers-reduced-motion:reduce){.free-seal{animation:none}}
 </style>
-<style>.phero{background-image:linear-gradient(105deg,rgba(10,21,33,.96) 0%,rgba(10,21,33,.82) 55%,rgba(10,21,33,.55) 100%),url('assets/images/hero-websites.jpg');background-size:cover;background-position:center}</style>
+<style>.phero{background-image:linear-gradient(105deg,rgba(10,21,33,.96) 0%,rgba(10,21,33,.82) 55%,rgba(10,21,33,.55) 100%),url('assets/images/hero-websites.jpg');background-size:cover;background-position:center}
+.price-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm)}
+.price-table td{padding:14px 18px;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--ink);vertical-align:top}
+.price-table tr:last-child td{border-bottom:none}
+.price-table td:last-child{text-align:right;font-weight:600;color:var(--navy)}
+.price-table .row-head td{background:var(--paper);font-family:var(--disp);font-weight:700;color:var(--navy);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.price-table .free{color:var(--ok);font-weight:800}
+@media(max-width:640px){.price-table td{padding:11px 12px;font-size:13.5px}}</style>
 </head>
 <body>
 
@@ -78,7 +85,28 @@
   </div>
 </section>
 
-<section class="section band"><div class="wrap"><div class="cta" style="box-shadow:none">
+<section class="section band">
+  <div class="wrap">
+    <div class="sec-head center"><p class="eyebrow">The website — what's included &amp; the cost</p><h2 class="big">Everything you get, and exactly what it costs.</h2></div>
+    <div style="max-width:760px;margin:0 auto">
+      <table class="price-table">
+        <tr class="row-head"><td>What's included</td><td>Cost</td></tr>
+        <tr><td>Professional multi-page website, built to a modern 2026 standard</td><td>Included</td></tr>
+        <tr><td>Mobile-first, fast, with hosting handled for you</td><td>Included</td></tr>
+        <tr><td>Lead capture wired straight into your CRM</td><td>Included</td></tr>
+        <tr><td>Search &amp; AI visibility built in from the start</td><td>Included</td></tr>
+        <tr><td>Your own custom look — never a cookie-cutter template</td><td>Included</td></tr>
+        <tr class="row-head"><td>Pricing</td><td></td></tr>
+        <tr><td><b>Website build</b> — design &amp; launch your site</td><td><span class="free">FREE</span> with an annual CRM plan<br><span class="muted" style="font-weight:400;font-size:13.5px">otherwise $1,200 one-time</span></td></tr>
+        <tr><td><b>Website Care</b> — updates, security &amp; keeping it current</td><td>$49/mo<br><span class="muted" style="font-weight:400;font-size:13.5px">or $29/mo billed annually</span></td></tr>
+        <tr><td><b>Add-ons</b> — online store, booking, custom pages &amp; features</td><td>Priced separately</td></tr>
+      </table>
+      <p class="muted center" style="margin-top:16px;font-size:14px">Only pay for what you actually need. Questions? <a href="contact.html" style="color:var(--gold-2);font-weight:600">Book a free call.</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section"><div class="wrap"><div class="cta" style="box-shadow:none">
   <h2>Want to see what yours could look like?</h2>
   <p>Tell us about your business on a quick free call and we'll show you a direction — no pressure, no jargon.</p>
   <div class="hero-cta"><a class="btn btn-gold" href="mailto:contact@digitalopsystems.com?subject=Website%20—%20free%20call">Book a free call <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost-light" href="index.html">Back to overview</a></div>
