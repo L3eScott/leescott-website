@@ -28,7 +28,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/dops.css">
-<style>.paths{grid-template-columns:repeat(3,1fr)}@media(max-width:820px){.paths{grid-template-columns:1fr}}</style>
+<style>.paths{grid-template-columns:repeat(3,1fr)}@media(max-width:820px){.paths{grid-template-columns:1fr}}
+.hero{position:relative}
+.free-seal{position:absolute;right:5%;top:96px;width:122px;height:122px;border-radius:50%;background:#C9A84C;color:#0D1B2A;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-12deg);box-shadow:0 10px 30px rgba(201,168,76,.42);z-index:6;animation:sealPulse 2.4s ease-in-out infinite}
+.free-seal .big{font-family:'Sora',sans-serif;font-weight:800;font-size:26px;line-height:1;letter-spacing:.02em}
+.free-seal .sub{font-weight:700;font-size:9.5px;margin-top:5px;padding:0 12px;line-height:1.25;text-transform:uppercase;letter-spacing:.05em}
+@keyframes sealPulse{0%,100%{transform:rotate(-12deg) scale(1);box-shadow:0 10px 30px rgba(201,168,76,.42)}50%{transform:rotate(-12deg) scale(1.06);box-shadow:0 0 30px 10px rgba(201,168,76,.5)}}
+@media(max-width:960px){.free-seal{position:static;margin:24px auto 0;transform:rotate(-8deg)}}
+@media(prefers-reduced-motion:reduce){.free-seal{animation:none}}</style>
 </head>
 <body>
 
@@ -43,6 +50,7 @@
       <a href="search-ai.html">Get Found</a>
       <a href="ai-helper.html">AI Helper</a>
       <a href="websites.html">Websites</a>
+      <a href="blog.html">Blog</a>
       <a href="#about">About</a>
       <a class="btn btn-gold" href="mailto:contact@digitalopsystems.com?subject=Free%20call">Book a free call</a>
     </nav>
@@ -66,6 +74,7 @@
       <span><span class="tick">✓</span>A real person, not a help desk</span>
     </div>
   </div>
+  <div class="free-seal" role="img" aria-label="Free website with your CRM"><span class="big">FREE</span><span class="sub">website with your CRM</span></div>
 </section>
 
 <!-- TWO PATHS -->
@@ -197,7 +206,7 @@
     <div class="ft-top">
       <a class="brand" href="index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
       <nav class="ft-links">
-        <a href="crm.html">CRM</a><a href="search-ai.html">Search &amp; AI</a><a href="ai-helper.html">AI Helper</a><a href="websites.html">Websites</a><a href="#about">About</a><a href="mailto:contact@digitalopsystems.com">Contact</a>
+        <a href="crm.html">CRM</a><a href="search-ai.html">Search &amp; AI</a><a href="ai-helper.html">AI Helper</a><a href="websites.html">Websites</a><a href="blog.html">Blog</a><a href="#about">About</a><a href="contact.html">Contact</a>
       </nav>
     </div>
     <div class="ft-bot">
