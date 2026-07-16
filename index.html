@@ -45,9 +45,18 @@
 .section-photo{width:100%;border-radius:16px;object-fit:cover;box-shadow:var(--sh);display:block}
 .founder{display:flex;gap:20px;align-items:center;margin-bottom:22px}
 .founder-photo{width:112px;height:112px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:var(--sh-sm);border:3px solid var(--white)}
-@media(max-width:820px){.serve-grid{grid-template-columns:1fr 1fr}.hero{background-image:linear-gradient(rgba(13,27,42,.9),rgba(13,27,42,.82)),url('assets/images/home-hero.jpg')}}</style>
+@media(max-width:820px){.serve-grid{grid-template-columns:1fr 1fr}.hero{background-image:linear-gradient(rgba(13,27,42,.9),rgba(13,27,42,.82)),url('assets/images/home-hero.jpg')}}
+.rank-ribbon{position:fixed;left:0;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-lr;z-index:45;background:linear-gradient(180deg,var(--gold),var(--gold-2));color:var(--navy);padding:20px 11px;border-radius:14px 0 0 14px;box-shadow:0 10px 30px rgba(201,168,76,.5);font-family:'Sora',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:12px;transition:padding-left .15s}
+.rank-ribbon:hover{padding-left:15px}
+.rank-ribbon .n{font-size:22px;font-weight:800;letter-spacing:0}
+.rank-ribbon .star{font-size:13px;color:var(--navy)}
+@media(max-width:960px){.rank-ribbon{display:none}}</style>
 </head>
 <body>
+
+<!-- RANK RIBBON — DORMANT (proof-first). Enable ONLY when we genuinely rank #1; edit the claim to the real phrase. To activate: delete this comment's wrapper so the <a> renders.
+<a class="rank-ribbon" href="search-ai.html" aria-label="Ranked #1 for barber websites in Baton Rouge"><span class="star">★</span><span class="n">#1</span><span>Barber Websites · Baton Rouge</span></a>
+-->
 
 <header class="hdr">
   <div class="wrap hdr-in">
