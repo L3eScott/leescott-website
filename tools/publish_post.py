@@ -29,6 +29,8 @@ TEMPLATE = os.path.join(REPO, "tools", "blog_post_template.html")
 BLOG_INDEX = os.path.join(REPO, "blog.html")
 SITEMAP = os.path.join(REPO, "sitemap.xml")
 OWN_HOST = "digitalopsystems.com"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import geo_aeo
 
 def die(msg):
     print("ERROR: " + msg); sys.exit(1)
@@ -94,6 +96,11 @@ def main():
     force = "--force" in flags
 
     meta, body = parse_spec(args[0])
+    # GEO/AEO: optional '---FAQ---' block after the body
+    faq_text = ""
+    if "---FAQ---" in body:
+        body, faq_text = body.split("---FAQ---", 1)
+        body, faq_text = body.strip(), faq_text.strip()
     require(meta, "title", "slug", "category", "date", "emoji", "description", "excerpt")
     try:
         d = datetime.strptime(meta["date"], "%Y-%m-%d")
@@ -106,7 +113,18 @@ def main():
     filename = "%s-%s.html" % (meta["date"], slug)
     post_path = os.path.join(REPO, "blog", filename)
 
-    check_eeat(body, force)
+    check_eeat(body + "\n" + faq_text, force)
+
+    # GEO/AEO artifacts (validated before anything is written)
+    faq_section, faq_jsonld = "", ""
+    if faq_text:
+        summary, faqs = geo_aeo.parse_faq(faq_text)
+        faq_section = geo_aeo.render_answer_blocks(summary, faqs)
+        faq_jsonld = geo_aeo.faqpage_jsonld(faqs)
+        ok, errs = geo_aeo.validate_faqpage(faq_jsonld)
+        if not ok:
+            die("FAQPage schema invalid: " + "; ".join(errs))
+        print("GEO/AEO check OK: FAQPage schema valid, %d Q&A." % len(faqs))
 
     if os.path.exists(post_path) and not force:
         die("post already exists: blog/%s (use --force to overwrite)" % filename)
@@ -120,7 +138,9 @@ def main():
         .replace("{{CATEGORY}}", esc(meta["category"]))
         .replace("{{DATE_HUMAN}}", meta["date_human"])
         .replace("{{DATE_ISO}}", meta["date_iso"])
-        .replace("{{BODY}}", body))
+        .replace("{{BODY}}", body)
+        .replace("{{FAQ_JSONLD}}", faq_jsonld)
+        .replace("{{FAQ_SECTION}}", faq_section))
     if "{{" in page:
         die("unfilled placeholder left in rendered page: " + re.search(r'\{\{[^}]+\}\}', page).group(0))
 
@@ -149,6 +169,7 @@ def main():
         print("would write : blog/%s (%d bytes)" % (filename, len(page)))
         print("blog.html   : %s" % ("card added" if new_idx != idx else "unchanged"))
         print("sitemap.xml : %s" % ("url added" if new_sm != sm else "unchanged"))
+        print("geo/aeo     : %s" % ("FAQPage schema + visible answer blocks" if faq_text else "none"))
         return
 
     open(post_path, "w", encoding="utf-8").write(page)
