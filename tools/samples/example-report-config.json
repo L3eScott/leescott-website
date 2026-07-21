@@ -1,0 +1,20 @@
+{
+  "customer": "Digital Ops Systems",
+  "period": "July 2026",
+  "sample": true,
+  "gbp": {"views": null, "calls": null, "directions": null, "website_clicks": null},
+  "did_this_month": [
+    "Launched the Google Business Profile and completed every field (services, hours, photos, description).",
+    "Published a new cited article: How Baton Rouge Barbers Get Found Online.",
+    "Re-optimized the barbershop page for local search and added FAQ schema so AI assistants can quote it.",
+    "Submitted the sitemap and requested indexing on the money pages."
+  ],
+  "next_month": [
+    "Get the first real Google reviews live and respond to each one.",
+    "Publish one more cited article on a topic your customers search for.",
+    "Add answer/FAQ blocks to the CRM and Websites pages."
+  ],
+  "we_need": [
+    "A quick yes to send the review request to your happy customers."
+  ]
+}
