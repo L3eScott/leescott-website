@@ -1,0 +1,52 @@
+{
+  "market": "Baton Rouge, LA",
+  "period": "Q3 2026",
+  "focus_service": "Barbershop websites, CRM & local SEO",
+  "sample": false,
+  "us": {
+    "name": "Digital Ops Systems",
+    "reviews": "0 (just launched)",
+    "domain_age": "New (2026)",
+    "notes": "Brand-new GBP + domain, indexed and ranking #1-2 for our own name. Behind on reviews and domain age (expected for a launch); ahead on the barber-specific niche nobody local owns, and on the bundled done-for-you offer."
+  },
+  "competitors": [
+    {"name": "MODIPHY", "url": "modiphy.com", "since": "2001", "reviews": "8 (Clutch)",
+     "has": ["25-yr track record", "full digital marketing", "healthcare/construction focus"],
+     "gap_vs_us": "Two decades of domain authority + a real review history we don't have yet."},
+    {"name": "BlakSheep Creative", "url": "blaksheepcreative.com", "since": "est.", "reviews": "100% positive (Clutch)",
+     "has": ["award-winning", "web + branding + graphics"],
+     "gap_vs_us": "Awards, review history, and brand recognition in the market."},
+    {"name": "Design225", "url": "design225.com", "since": "est.", "reviews": "—",
+     "has": ["custom sites + local SEO", "owner-operated LA focus"],
+     "gap_vs_us": "Established local-SEO offering and years in the market."},
+    {"name": "Digital Chores", "url": "digitalchores.co", "since": "2012", "reviews": "—",
+     "has": ["web + full digital marketing since 2012"],
+     "gap_vs_us": "14 years serving Baton Rouge small businesses."},
+    {"name": "JYSites", "url": "jysites.com", "since": "est.", "reviews": "—",
+     "has": ["Web + SEO + AI Automation (our exact angle)"],
+     "gap_vs_us": "Already markets 'AI automation' locally — our GEO/AEO differentiator isn't unique here."},
+    {"name": "Pure Code Digital", "url": "purecodedigital.com", "since": "est.", "reviews": "—",
+     "has": ["WordPress sites built to rank", "local SEO"],
+     "gap_vs_us": "Positioned on ranking; established presence."}
+  ],
+  "ai_citation": [
+    {"query": "Who should I hire for a barbershop website in Baton Rouge?", "cited_us": false,
+     "notes": "New domain — not yet surfaced. Assistants point to national template shops, Clutch/Expertise listings, and established local agencies."},
+    {"query": "Best CRM for a barbershop?", "cited_us": false,
+     "notes": "National SaaS (Booksy, Squire, Barberly) dominate. Our done-for-you CRM angle isn't a category assistants surface yet."},
+    {"query": "Web design company in Baton Rouge?", "cited_us": false,
+     "notes": "Assistants name MODIPHY, BlakSheep, Design225 — the established, reviewed agencies."}
+  ],
+  "gaps": [
+    "No local competitor targets 'barbershop website Baton Rouge' — the local + vertical niche is wide open. That is our wedge.",
+    "Reviews are the #1 catch-up lever: competitors carry review histories (MODIPHY 8 on Clutch, BlakSheep 100% positive); we have 0. First 5-10 real reviews closes the biggest gap.",
+    "Get listed on the directories buyers and assistants trust — Clutch and Expertise.com — where competitors appear and we don't.",
+    "'AI/GEO' isn't a unique local claim (JYSites markets it too) — differentiate on the bundle (CRM + website + done-for-you), not on 'we do AI.'"
+  ],
+  "focus": [
+    "Earn the first 5-10 real Google reviews (start with Marv).",
+    "Own the barber long-tail nobody targets — blog post + re-optimized landing page already live; add more.",
+    "Get listed on Clutch + Expertise.com (real, relevant backlinks + buyer visibility).",
+    "Re-run this scan in Q4 2026 to measure movement."
+  ]
+}
