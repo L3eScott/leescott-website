@@ -1,0 +1,21 @@
+{
+  "customer": "Digital Ops Systems",
+  "period": "August 2026",
+  "sample": false,
+  "gbp": {"views": null, "calls": null, "directions": null, "website_clicks": null},
+  "did_this_month": [
+    "Cleaned up business contact info site-wide and on the Google Business Profile for consistent NAP signals.",
+    "Added dateModified to every article's structured data so Google and AI assistants read accurate freshness.",
+    "Verified structured data (Organization, LocalBusiness, Article, FAQ) is valid across the site.",
+    "Confirmed sitemap (26 URLs), robots, and canonical tags are all healthy and indexable."
+  ],
+  "next_month": [
+    "Earn the first real Google reviews and respond to each one (biggest ranking + trust lever).",
+    "Get listed on Clutch and Expertise.com for relevant backlinks and buyer visibility.",
+    "Publish one more cited article on a topic local customers actually search."
+  ],
+  "we_need": [
+    "A quick yes to send the review request to your happy customers.",
+    "The Google Search Console Performance CSV export each month so this report runs on real numbers."
+  ]
+}
