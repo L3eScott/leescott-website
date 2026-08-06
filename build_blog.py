@@ -257,7 +257,6 @@ FOOTER_TMPL = """  </main>
         <p>We build websites that capture leads, follow up fast, and keep your business from losing customers to slower competitors.</p>
         <div class="footer-contact">
           <a href="mailto:contact@digitalopsystems.com">contact@digitalopsystems.com</a>
-          <a href="tel:2254957086">225-495-7086</a>
         </div>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/digitalops-systems/posts/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
