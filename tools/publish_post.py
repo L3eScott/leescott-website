@@ -108,6 +108,15 @@ def main():
         die("date must be YYYY-MM-DD")
     meta["date_human"] = d.strftime("%B %-d, %Y")
     meta["date_iso"] = meta["date"]
+    # dateModified: defaults to publish date (content is fresh at publish).
+    # Set an optional 'updated: YYYY-MM-DD' in the spec ONLY when the post is
+    # genuinely revised later — never stamp a fake freshness date.
+    updated = meta.get("updated", meta["date"])
+    try:
+        datetime.strptime(updated, "%Y-%m-%d")
+    except ValueError:
+        die("updated must be YYYY-MM-DD")
+    meta["datemod_iso"] = updated
     slug = re.sub(r'[^a-z0-9-]', '', meta["slug"].lower())
     if not slug: die("slug empty after sanitising")
     filename = "%s-%s.html" % (meta["date"], slug)
@@ -138,6 +147,7 @@ def main():
         .replace("{{CATEGORY}}", esc(meta["category"]))
         .replace("{{DATE_HUMAN}}", meta["date_human"])
         .replace("{{DATE_ISO}}", meta["date_iso"])
+        .replace("{{DATEMOD_ISO}}", meta["datemod_iso"])
         .replace("{{BODY}}", body)
         .replace("{{FAQ_JSONLD}}", faq_jsonld)
         .replace("{{FAQ_SECTION}}", faq_section))
