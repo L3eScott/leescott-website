@@ -43,17 +43,21 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/dops.css">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/dops.css?v=20261030d">
+<link rel="icon" href="../favicon.svg?v=20261030c" type="image/svg+xml">
 <style>.phero{background-image:linear-gradient(105deg,rgba(10,21,33,.96) 0%,rgba(10,21,33,.82) 55%,rgba(10,21,33,.6) 100%),url('../assets/images/hero-post.jpg');background-size:cover;background-position:center}</style>
 </head>
 <body>
 
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="../index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
+    <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/logo-horizontal.svg" alt="Digital Ops Systems"></a>
     <nav class="nav" id="nav">
-      <a href="../crm.html">Get Organized</a><a href="../search-ai.html">Get Found</a><a href="../ai-helper.html">AI Helper</a><a href="../websites.html">Websites</a><a href="../blog.html">Blog</a><a href="../about.html">About</a>
+      <a href="../websites.html">Websites</a>
+      <a href="../search-ai.html">Get Found</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../about.html">About</a>
+      <a href="../ai-agents.html" class="nav-new">AI Agents<span class="tri">▲</span></a>
       <a class="btn btn-gold" href="mailto:contact@digitalopsystems.com?subject=Free%20call">Book a free call</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -87,8 +91,8 @@
 <p>Here's what the data actually says: most small businesses now use AI somewhere in customer service, and <strong>nine out of ten plan to keep or grow their human teams</strong> (<a href="https://www.talkdesk.com/news-and-press/press-releases/small-business-ai-survey/" target="_blank" rel="noopener noreferrer">Talkdesk</a>). Owners aren't handing over the shop — they're adding a safety net. Sentiment backs it up: <strong>72% of small-business owners feel positive about AI and 82% find it helpful</strong> (<a href="https://www.paychex.com/articles/human-resources/small-business-ai-impact" target="_blank" rel="noopener noreferrer">Paychex</a>).</p>
 <h2>What we're building</h2>
 <p>It's called <strong>Front Desk</strong> — think of it as an after-hours, mid-cut, never-flustered receptionist. It catches the calls you can't, texts the customer back in seconds, and holds the conversation until you're free. A human still runs your shop. This just stops the customers you'd otherwise lose to voicemail.</p>
-<p>When you're ready to actually keep those customers coming back, that's what our <a href="/crm.html">CRM</a> is for — but Front Desk is the front door: it makes sure the lead never slips away in the first place.</p>
-<p>Front Desk isn't ready yet — we're opening early access this fall. The waitlist is free, with no cost and no commitment. <a href="/front-desk.html">Grab your spot here.</a></p>
+<p>When you're ready to actually keep those customers coming back, that's the kind of thing our <a href="/ai-agents.html">AI Agents</a> are being built to handle — coming soon — making sure the lead never slips away in the first place.</p>
+<p>Front Desk isn't ready yet — it's part of our AI Agents, opening early access this fall. The waitlist is free, with no cost and no commitment. <a href="/ai-agents.html">Grab your spot here.</a></p>
       </article>
     </div>
   </section>
@@ -108,18 +112,27 @@
 
 </main>
 
-<footer class="ft"><div class="wrap">
-  <div class="ft-top">
-    <a class="brand" href="../index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
-    <nav class="ft-links"><a href="../crm.html">CRM</a><a href="../search-ai.html">Search &amp; AI</a><a href="../ai-helper.html">AI Helper</a><a href="../websites.html">Websites</a><a href="../blog.html">Blog</a><a href="../about.html">About</a><a href="mailto:contact@digitalopsystems.com">Contact</a></nav>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/logo-horizontal-white.svg" alt="Digital Ops Systems"></a>
+      <nav class="ft-links">
+        <a href="../websites.html">Websites</a><a href="../search-ai.html">Get Found</a><a href="../ai-agents.html">AI Agents</a><a href="../private-office.html">Private Office</a><a href="../blog.html">Blog</a><a href="../newsletter.html">Newsletter</a><a href="../about.html">About</a><a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="ft-bot">
+      <span>© 2026 Digital Ops Systems. Helping 100 owners build something real.</span>
+      <span>Baton Rouge, LA · Houston, TX · Coming soon Atlanta, GA · contact@digitalopsystems.com</span>
+      <span><a href="../privacy.html">Privacy Policy</a> · <a href="../terms-of-service.html">Terms of Service</a></span>
+    </div>
   </div>
-  <div class="ft-bot"><span>© 2026 Digital Ops Systems. Helping 100 owners build something real.</span><span>Baton Rouge · contact@digitalopsystems.com</span></div>
-</div></footer>
+</footer>
 
 <script>
   const t=document.getElementById('navToggle'), n=document.getElementById('nav');
   t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
   n.querySelectorAll('a').forEach(function(a){var href=a.getAttribute('href')||'';if(href.indexOf('#')>-1||href.indexOf('mailto:')>-1)return;var h=href.split('/').pop(),c=location.pathname.split('/').pop()||'index.html';if(h===c||(location.pathname.indexOf('/blog/')>-1&&h==='blog.html'))a.setAttribute('aria-current','page');});
 </script>
+<script defer src="../assets/js/header-scroll.js?v=20261030c"></script>
 </body>
 </html>

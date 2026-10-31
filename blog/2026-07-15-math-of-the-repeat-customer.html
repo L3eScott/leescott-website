@@ -43,17 +43,21 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/dops.css">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/dops.css?v=20261030d">
+<link rel="icon" href="../favicon.svg?v=20261030c" type="image/svg+xml">
 <style>.phero{background-image:linear-gradient(105deg,rgba(10,21,33,.96) 0%,rgba(10,21,33,.82) 55%,rgba(10,21,33,.6) 100%),url('../assets/images/hero-post.jpg');background-size:cover;background-position:center}</style>
 </head>
 <body>
 
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="../index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
+    <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/logo-horizontal.svg" alt="Digital Ops Systems"></a>
     <nav class="nav" id="nav">
-      <a href="../crm.html">Get Organized</a><a href="../search-ai.html">Get Found</a><a href="../ai-helper.html">AI Helper</a><a href="../websites.html">Websites</a><a href="../blog.html">Blog</a><a href="../about.html">About</a>
+      <a href="../websites.html">Websites</a>
+      <a href="../search-ai.html">Get Found</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../about.html">About</a>
+      <a href="../ai-agents.html" class="nav-new">AI Agents<span class="tri">▲</span></a>
       <a class="btn btn-gold" href="mailto:contact@digitalopsystems.com?subject=Free%20call">Book a free call</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -86,7 +90,7 @@
 <p>The reminder that didn't get sent. The birthday that passed unnoticed. The "we should get you rebooked" that lived only in your head and then got buried under a busy week. Your best customers don't leave in anger — they just drift, quietly, because a competitor stayed in touch and you didn't.</p>
 <h2>The fix is a system, not more hustle</h2>
 <p>You can't out-remember a busy season with willpower. The businesses that hold onto their customers do it with a system that remembers for them: who the customer is, when they're due back, when the renewal or birthday is coming — and a nudge that goes out on its own, in your voice, at the right time.</p>
-<p>That's the entire reason we built our <a href="/crm.html">CRM</a>. Not to add work, but to make sure a good day never quietly costs you a customer you'd already won.</p>
+<p>That's exactly what our <a href="/ai-agents.html">AI Agents</a> are being built for — coming soon. Not to add work, but to make sure a good day never quietly costs you a customer you'd already won.</p>
 <p>Chase the new customer — sure. But the money is often sitting in the customers whose names you already know.</p>
       </article>
     </div>
@@ -107,18 +111,27 @@
 
 </main>
 
-<footer class="ft"><div class="wrap">
-  <div class="ft-top">
-    <a class="brand" href="../index.html"><span class="mk"><span>D</span></span><span>Digital Ops Systems<small>Systems for local business</small></span></a>
-    <nav class="ft-links"><a href="../crm.html">CRM</a><a href="../search-ai.html">Search &amp; AI</a><a href="../ai-helper.html">AI Helper</a><a href="../websites.html">Websites</a><a href="../blog.html">Blog</a><a href="../about.html">About</a><a href="mailto:contact@digitalopsystems.com">Contact</a></nav>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/logo-horizontal-white.svg" alt="Digital Ops Systems"></a>
+      <nav class="ft-links">
+        <a href="../websites.html">Websites</a><a href="../search-ai.html">Get Found</a><a href="../ai-agents.html">AI Agents</a><a href="../private-office.html">Private Office</a><a href="../blog.html">Blog</a><a href="../newsletter.html">Newsletter</a><a href="../about.html">About</a><a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="ft-bot">
+      <span>© 2026 Digital Ops Systems. Helping 100 owners build something real.</span>
+      <span>Baton Rouge, LA · Houston, TX · Coming soon Atlanta, GA · contact@digitalopsystems.com</span>
+      <span><a href="../privacy.html">Privacy Policy</a> · <a href="../terms-of-service.html">Terms of Service</a></span>
+    </div>
   </div>
-  <div class="ft-bot"><span>© 2026 Digital Ops Systems. Helping 100 owners build something real.</span><span>Baton Rouge · contact@digitalopsystems.com</span></div>
-</div></footer>
+</footer>
 
 <script>
   const t=document.getElementById('navToggle'), n=document.getElementById('nav');
   t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
   n.querySelectorAll('a').forEach(function(a){var href=a.getAttribute('href')||'';if(href.indexOf('#')>-1||href.indexOf('mailto:')>-1)return;var h=href.split('/').pop(),c=location.pathname.split('/').pop()||'index.html';if(h===c||(location.pathname.indexOf('/blog/')>-1&&h==='blog.html'))a.setAttribute('aria-current','page');});
 </script>
+<script defer src="../assets/js/header-scroll.js?v=20261030c"></script>
 </body>
 </html>

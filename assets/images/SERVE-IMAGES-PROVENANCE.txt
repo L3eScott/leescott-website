@@ -1,0 +1,8 @@
+Who-we-serve (top-tier) images — provenance & license
+Added 2026-10-30. Source: Pexels. License: free for commercial use, no attribution required.
+(Pexels License — verify at pexels.com/license before any paid/premium swap.)
+
+serve-founders.jpg    = Pexels photo 18351023 (entrepreneur at his events business, coffee in hand)
+serve-executives.jpg  = Pexels photo 23885849 (young businessman navy suit, urban)
+serve-managers.jpg    = Pexels photo 9034230  (diverse team strategy meeting)
+serve-talent.jpg      = Pexels photo 8279815  (creative professional multitasking on phone)
